@@ -22,5 +22,12 @@ createJournalEntry (entry) {
       }
     }
   })
-}
+},
+
+getJournalEntries () {
+  console.log('getJournalEntries was run!')
+  const journalEntries = this.get('ajax').request('/journal_entries')
+  console.log(journalEntries)
+  return journalEntries
+  }
 })

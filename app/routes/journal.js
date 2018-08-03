@@ -22,6 +22,23 @@ export default Route.extend({
           this.get('flashMessages')
             .danger('There was a problem. Please try again.')
         })
+    },
+
+    getJournalEntries () {
+      console.log('in journal.js getJournalEntries has been accessed')
+      const journalEntries = this.get('journal').getJournalEntries()
+      return journalEntries
+      .then((journalEntries) => {
+        console.log('journalEntries is ', journalEntries)
+      })
+      .then(() => {
+        this.get('flashMessages')
+          .success('Successfully got journal entries.')
+      })
+      .catch(() => {
+        this.get('flashMessages')
+          .danger('There was a problem. Please try again.')
+      })
     }
   }
 })

@@ -10,7 +10,9 @@ Router.map(function () {
   this.route('sign-up')
   this.route('sign-in')
   this.route('change-password')
-  this.route('journal')
+  this.route('journal', function() {
+    this.route('view');
+  })
 })
 
 export default Router
