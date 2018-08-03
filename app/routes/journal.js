@@ -5,9 +5,16 @@ import { inject as service } from '@ember/service'
 export default Route.extend({
   journal: service(),
   flashMessages: service(),
+  journalEntries: 'THIS IS HERE GODDAMNIT',
 
   model () {
-    return {}
+    const response = this.get('journal').getJournalEntries()
+    console.log ('response is ', response)
+    return response
+    .then((result) => {
+      console.log('result is ', result.journal_entries)
+      return result.journal_entries
+    })
   },
 
   actions: {
@@ -30,6 +37,8 @@ export default Route.extend({
       return journalEntries
       .then((journalEntries) => {
         console.log('journalEntries is ', journalEntries)
+        this.journalEntries = journalEntries.journal_entries
+        console.log('this.journalEntries is ', this.journalEntries)
       })
       .then(() => {
         this.get('flashMessages')

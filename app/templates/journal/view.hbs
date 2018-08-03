@@ -1,1 +1,24 @@
 {{get-journal-entries-form submit='getJournalEntries'}}
+
+<div>
+  <p>This is a thing</p>
+  <ul>
+    {{#each model as |journalEntry|}}
+      <li>{{journalEntry.title}}</li>
+    {{/each}}
+  </ul>
+</div>
+
+{{!-- {{#each journalEntry as |journalEntry|}}
+  <form>
+  <tr class="file-row" data-id="{{journalEntry._id}}" data-owner="{{journalEntry.user.id}}">
+    <td><input class="file-title file-table-cell-edit file-table-cell-inactive" value="{{journalEntry.title}}"</td> --}}
+    {{!-- <td>{{journalEntry.dateCreated}}</td> --}}
+    {{!-- <td>{{journalEntry.starred}}</td>
+    <td><button type="button" class="btn-line clickable editable-btn edit-btn">Edit</button></td>
+    <td><button type="button" class="btn-line clickable editable-btn update-btn hide">Update</button></td>
+    <td><button type="button" class="btn-line clickable editable-btn delete-btn" data-toggle="modal" data-target="#deleteModal">Delete</button></td>
+  </tr>
+  </form> --}}
+
+{{!-- {{/each}} --}}
