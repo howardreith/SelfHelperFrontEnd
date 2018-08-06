@@ -1,12 +1,26 @@
 {{get-journal-entries-form submit='getJournalEntries'}}
 
-<div>
-  <p>This is a thing</p>
-  <ul>
+<div id="journal-list" class='journal-list-container'>
+  <h3>Journal Entries</h3>
+  <table id='journal-table' class='table table-striped'>
+    <thead>
+      <tr>
+        <th id='starred-heading'>Starred</th>
+        <th id='title-heading'>Title</th>
+        <th id='date-created-heading'>Date Created</th>
+        <th id='delete-heading'>Delete</th>
+      </tr>
+    </thead>
+    <tbody id='journal-table-body'>
     {{#each model as |journalEntry|}}
-      <li>{{journalEntry.title}}</li>
+      <tr class="file-row" data-id="{{journalEntry.id}}">
+      <td>{{journalEntry.starred}}</td>
+      <td>{{journalEntry.title}}</td>
+      <td>{{journalEntry.dateCreated}}</td>
+      </tr>
     {{/each}}
-  </ul>
+  </tbody>
+  </table>
 </div>
 
 {{!-- {{#each journalEntry as |journalEntry|}}
