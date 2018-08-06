@@ -18,7 +18,8 @@ createJournalEntry (entry) {
       journal_entry: {
         title: entry.title,
         content: entry.content,
-        starred: entry.starred
+        starred: entry.starred,
+        journal_id: entry.id
       }
     }
   })
@@ -29,5 +30,12 @@ getJournalEntries () {
   const journalEntries = this.get('ajax').request('/journal_entries')
   console.log(journalEntries)
   return journalEntries
-  }
+},
+
+getJournalEntry (id) {
+  console.log('getJournalEntry was run!')
+  const journalEntry = this.get('ajax').request('/journal_entries/' + id)
+  console.log('journalEntry is ', journalEntry)
+  return journalEntry
+}
 })

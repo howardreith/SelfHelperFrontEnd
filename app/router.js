@@ -12,6 +12,7 @@ Router.map(function () {
   this.route('change-password')
   this.route('journal', function() {
     this.route('view');
+    this.route('show', {path: '/:journal_id'});
   })
 })
 
