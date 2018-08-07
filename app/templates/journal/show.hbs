@@ -1,5 +1,12 @@
-<div>
-  <h2 class="title">{{journal.title}}</h2>
-</div>
+{{left-nav}}
 
-{{journal-form submit="createJournalEntry"}}
+{{journal-form submit="updateJournalEntry"}}
+
+<p>this is here</p>
+
+{{#each model as |journalEntry|}}
+{{!-- <p>ID: {{journalEntry.id}}</p> --}}
+<p>Title: {{journalEntry.title}}</p>
+{{/each}}
+
+{{!-- Something to do with the model --}}

@@ -37,8 +37,17 @@ getJournalEntry (id) {
   return journalEntry
 },
 
-updateEntry () {
-  console.log('updateEntry was run in journal.js!')
+updateJournalEntry (entry) {
+  console.log('updateJournalEntry was run in the service')
+  console.log('entry in the updateJournalEntry service is ', entry)
+  return this.get('ajax').patch('/journal_entries/' + entry.id, {
+    data: {
+      journal_entry: {
+        title: entry.title,
+        content: entry.content
+      }
+    }
+  })
   // getJournalEntry(id)
 }
 })

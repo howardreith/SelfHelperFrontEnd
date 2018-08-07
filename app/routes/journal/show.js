@@ -5,8 +5,16 @@ export default Route.extend({
   journal: service(),
   flashMessages: service(),
 
-  model () {
-    const response = this.get('journal').getJournalEntry(3)
+  actions: {
+    updateJournalEntry (entry) {
+      console.log('updateJournalEntry was called in the show.js routes file')
+      this.get('journal').updateJournalEntry(entry)
+    }
+  },
+
+  model (params) {
+    console.log('params is ', params)
+    const response = this.get('journal').getJournalEntry(params.journal_id)
     console.log ('response is ', response)
     return response
     .then((result) => {
