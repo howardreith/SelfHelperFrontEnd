@@ -11,9 +11,7 @@ export default Route.extend({
       console.log('this.context is ', this.context)
       const clickedRow = event.target.parentNode.parentNode.getElementsByTagName('td')[1].innerText
       console.log('clickedRow is ', clickedRow)
-      this.send('goToJournal', clickedRow)
-      // Howie continue from here
-      // https://discuss.emberjs.com/t/passing-a-list-of-values-or-objects-to-another-route-controller/3604
+      this.transitionTo('/journal/' + clickedRow)
     }
   }
 });

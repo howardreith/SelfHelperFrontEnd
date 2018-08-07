@@ -13,21 +13,32 @@ export default Route.extend({
   },
 
   model (params) {
-    console.log('params is ', params)
     const response = this.get('journal').getJournalEntry(params.journal_id)
     console.log ('response is ', response)
     return response
     .then((result) => {
-      console.log('result is ', result.journal_entry)
+      console.log('result is', result)
+      console.log('result.journal_entry is ', result.journal_entry)
       return result.journal_entry
     })
-    .then(() => {
-      this.get('flashMessages')
-        .success('Successfully got journal entries.')
-    })
-    .catch(() => {
-      this.get('flashMessages')
-        .danger('There was a problem. Please try again.')
-    })
   }
+
+  // model (params) {
+  //   console.log('params is ', params)
+  //   const response = this.get('journal').getJournalEntry(params.journal_id)
+  //   console.log ('response is ', response)
+  //   return response
+  //   .then((result) => {
+  //     console.log('result is ', result.journal_entry)
+  //     return result.journal_entry
+  //   })
+  //   .then(() => {
+  //     this.get('flashMessages')
+  //       .success('Successfully got journal entry.')
+  //   })
+  //   .catch(() => {
+  //     this.get('flashMessages')
+  //       .danger('There was a problem. Please try again.')
+  //   })
+  // }
 });

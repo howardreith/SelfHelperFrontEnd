@@ -4,9 +4,8 @@
 
 <p>this is here</p>
 
-{{#each model as |journalEntry|}}
-{{!-- <p>ID: {{journalEntry.id}}</p> --}}
-<p>Title: {{journalEntry.title}}</p>
-{{/each}}
-
-{{!-- Something to do with the model --}}
+<ui>
+  <li>Title: {{model.title}}</li>
+  <li>ID: {{model.id}}</li>
+  <li>Content: {{model.content}}</li>
+</ui>
