@@ -6,7 +6,6 @@ export default Route.extend({
   flashMessages: service(),
 
   model () {
-    console.log('params.id is')
     const response = this.get('journal').getJournalEntry(3)
     console.log ('response is ', response)
     return response

@@ -16,10 +16,8 @@ createJournalEntry (entry) {
   return this.get('ajax').post('/journal_entries', {
     data: {
       journal_entry: {
-        title: entry.title,
-        content: entry.content,
-        starred: entry.starred,
-        journal_id: entry.id
+        title: '',
+        content: ''
       }
     }
   })
@@ -37,5 +35,10 @@ getJournalEntry (id) {
   const journalEntry = this.get('ajax').request('/journal_entries/' + id)
   console.log('journalEntry is ', journalEntry)
   return journalEntry
+},
+
+updateEntry () {
+  console.log('updateEntry was run in journal.js!')
+  // getJournalEntry(id)
 }
 })

@@ -17,9 +17,13 @@ export default Route.extend({
   },
 
   actions: {
-    createJournalEntry (entry) {
-      console.log('in journal.js entry is ', entry)
-      this.get('journal').createJournalEntry(entry)
+    createJournalEntry () {
+      this.get('journal').createJournalEntry()
+        .then((response) => {
+          console.log('response is ', response)
+          console.log('response.journal_entry.id is ', response.journal_entry.id)
+          this.transitionTo('/journal/' + response.journal_entry.id)
+        })
         .then(() => {
           this.get('flashMessages')
             .success('Successfully created a journal entry.')
