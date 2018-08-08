@@ -8,7 +8,7 @@
     <thead>
       <tr>
         <th id='starred-heading'>Starred</th>
-        <th id='id-heading'>id</th>
+        <th id='id-heading'>ID</th>
         <th id='title-heading'>Title</th>
         <th id='date-created-heading'>Date Created</th>
         <th id='update-heading'>Update</th>
@@ -21,8 +21,9 @@
       <td>{{journalEntry.starred}}</td>
       <td>{{journalEntry.id}}</td>
       <td>{{journalEntry.title}}</td>
-      <td>{{journalEntry.dateCreated}}</td>
+      <td>{{journalEntry.updated_at}}</td>
       <td><button {{action "updateEntry"}}>Update</button></td>
+      <td><button {{action "deleteEntry"}}>Delete</button></td>
       </tr>
     {{/each}}
   </tbody>

@@ -48,6 +48,10 @@ updateJournalEntry (entry) {
       }
     }
   })
-  // getJournalEntry(id)
+},
+deleteJournalEntry (id) {
+  console.log('deleteJournalEntry was run in the service.')
+  console.log('id in the deleteJournalEntry service is ', id)
+  return this.get('ajax').del('/journal_entries/' + id)
 }
 })
