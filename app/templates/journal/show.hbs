@@ -2,10 +2,29 @@
 
 {{journal-form submit="updateJournalEntry"}}
 
-<p>this is here</p>
+<form {{action "updateJournalEntry" on="submit"}}>
+  <div class='form-group'>
+  <label for='title'>Title</label>
+  {{input value=model.title id='title' class='form-control'}}
+  </div>
 
-<ui>
+  <div class='form-group'>
+  <label for='content'>Content</label>
+  {{input value=model.content id='content' class='form-control'}}
+  </div>
+
+  <button type="submit" class="btn btn-primary">
+    Update Journal Entry
+  </button>
+</form>
+
+<button class="btn btn-default" type='submit'>
+  Cancel
+</button>
+
+
+{{!-- <ui>
   <li>Title: {{model.title}}</li>
   <li>ID: {{model.id}}</li>
   <li>Content: {{model.content}}</li>
-</ui>
+</ui> --}}

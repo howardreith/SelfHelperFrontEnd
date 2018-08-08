@@ -4,10 +4,13 @@ import { inject as service } from '@ember/service'
 export default Route.extend({
   journal: service(),
   flashMessages: service(),
+  tagName: 'form',
+  classNames: ['form-horizontal'],
+  entry: {},
 
   actions: {
     updateJournalEntry (entry) {
-      console.log('updateJournalEntry was called in the show.js routes file')
+      console.log('entry in show.js is ', entry)
       this.get('journal').updateJournalEntry(entry)
     }
   },
@@ -21,6 +24,10 @@ export default Route.extend({
       console.log('result.journal_entry is ', result.journal_entry)
       return result.journal_entry
     })
+    .catch(() => {
+      this.get('flashMessages')
+      .danger('There was a problem. Please try again.')
+})
   }
 
   // model (params) {
