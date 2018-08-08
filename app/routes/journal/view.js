@@ -11,6 +11,11 @@ export default Route.extend({
     return response
     .then((result) => {
       console.log('result is ', result.journal_entries)
+      result.journal_entries.forEach((journal_entry) => {
+        console.log('journal_entry is ', journal_entry)
+        journal_entry.updated_at = journal_entry.updated_at.slice(0, -5).split('T').join('  ')
+        journal_entry.updated_at = journal_entry.created_at.slice(0, -5).split('T').join('  ')
+      })
       return result.journal_entries
     })
   },
