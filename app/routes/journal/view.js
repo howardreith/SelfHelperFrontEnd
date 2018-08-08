@@ -5,6 +5,16 @@ export default Route.extend({
   journal: service(),
   flashMessages: service(),
 
+  model () {
+    const response = this.get('journal').getJournalEntries()
+    console.log ('response is ', response)
+    return response
+    .then((result) => {
+      console.log('result is ', result.journal_entries)
+      return result.journal_entries
+    })
+  },
+
   actions: {
     goToJournal() {
       this.transitionTo('journal')
@@ -22,9 +32,10 @@ export default Route.extend({
       const clickedRow = event.target.parentNode.parentNode.getElementsByTagName('td')[1].innerText
       console.log('clickedRow is ', clickedRow)
       this.get('journal').deleteJournalEntry(clickedRow)
+      .then(() => this.refresh())
       .then(() => {
         this.get('flashMessages')
-        .success('Successfully got journal entries.')
+        .success('Successfully deleted journal entry.')
       })
       .catch(() => {
         this.get('flashMessages')
@@ -32,4 +43,4 @@ export default Route.extend({
       })
     }
   }
-});
+})

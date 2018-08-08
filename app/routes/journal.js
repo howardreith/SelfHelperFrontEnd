@@ -7,13 +7,6 @@ export default Route.extend({
   flashMessages: service(),
 
   model () {
-    const response = this.get('journal').getJournalEntries()
-    console.log ('response is ', response)
-    return response
-    .then((result) => {
-      console.log('result is ', result.journal_entries)
-      return result.journal_entries
-    })
   },
 
   actions: {
