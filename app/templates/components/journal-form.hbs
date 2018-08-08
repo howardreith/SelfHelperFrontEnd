@@ -1,6 +1,6 @@
 {{input type='hidden' value=journalEntry.id}}
 <h4>Title</h4>{{input value=journalEntry.title}}
-<h4>Date</h4>
+<h4>Date</h4>{{input value=journalEntry.updated_at}}
 <h4>Content</h4>{{input value=journalEntry.content}}
 
 <button type="submit" class="btn btn-primary" {{action "submit"}}>

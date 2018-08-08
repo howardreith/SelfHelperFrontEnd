@@ -22,6 +22,7 @@ export default Route.extend({
     .then((result) => {
       console.log('result is', result)
       console.log('result.journal_entry is ', result.journal_entry)
+      result.journal_entry.updated_at = result.journal_entry.updated_at.slice(0, -5).split('T').join('  ')
       return result.journal_entry
     })
     .catch(() => {
