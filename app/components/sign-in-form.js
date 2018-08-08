@@ -11,6 +11,7 @@ export default Component.extend({
 
     reset () {
       this.set('credentials', {})
+      this.sendAction('goToIndex')
     }
   }
 })

@@ -19,6 +19,9 @@ export default Route.extend({
           this.get('flashMessages')
           .danger('There was a problem. Please try again.')
         })
+    },
+    goToIndex () {
+      this.transitionTo('index')
     }
   }
 })

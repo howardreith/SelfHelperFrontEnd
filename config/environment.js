@@ -45,9 +45,9 @@ module.exports = function (environment) {
   }
 
   if (environment === 'production') {
-    ENV.rootURL = '/<name-of-git-repo>'
+    ENV.rootURL = '/hotguydefrontend'
     ENV.locationType = 'hash'
-    ENV.apiHost = '<deployed api url>'
+    ENV.apiHost = 'https://morning-brook-19819.herokuapp.com/'
   }
 
   return ENV
