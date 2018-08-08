@@ -12,6 +12,15 @@ export default Route.extend({
     updateJournalEntry (entry) {
       console.log('entry in show.js is ', entry)
       this.get('journal').updateJournalEntry(entry)
+      .then(() => this.refresh())
+      .then(() => {
+        this.get('flashMessages')
+          .success('Successfully updated entry.')
+      })
+      .catch(() => {
+        this.get('flashMessages')
+          .danger('There was a problem. Please try again.')
+      })
     }
   },
 

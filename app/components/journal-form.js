@@ -18,9 +18,5 @@ export default Component.extend({
       console.log('entry is ', this.get('entry'))
       this.sendAction('submit', this.get('entry'))
     },
-
-    reset () {
-      this.set('entry', {})
-    }
   }
 })
