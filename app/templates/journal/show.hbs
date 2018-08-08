@@ -1,26 +1,6 @@
 {{left-nav}}
 
-{{journal-form submit="updateJournalEntry"}}
-
-<form {{action "updateJournalEntry" on="submit"}}>
-  <div class='form-group'>
-  <label for='title'>Title</label>
-  {{input value=model.title id='title' class='form-control'}}
-  </div>
-
-  <div class='form-group'>
-  <label for='content'>Content</label>
-  {{input value=model.content id='content' class='form-control'}}
-  </div>
-
-  <button type="submit" class="btn btn-primary">
-    Update Journal Entry
-  </button>
-</form>
-
-<button class="btn btn-default" type='submit'>
-  Cancel
-</button>
+{{journal-form submit="updateJournalEntry" journalEntry=model}}
 
 
 {{!-- <ui>
