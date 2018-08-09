@@ -1,3 +1,7 @@
+{{left-nav-blank}}
+
+<div class='everything'>
+
 {{#bs-navbar type=(if inverse 'inverse') fluid=fluid collapsed=collapsed onCollapse=(action (mut collapsed) true) onExpand=(action (mut collapsed) false) as |navbar|}}
   <div class="navbar-header">
     {{navbar.toggle}}
@@ -17,8 +21,6 @@
     {{/navbar.nav}}
   {{/navbar.content}}
 {{/bs-navbar}}
-
-<div class='everything'>
 
 {{#each flashMessages.queue as |flash|}}
   {{flash-message flash=flash}}
