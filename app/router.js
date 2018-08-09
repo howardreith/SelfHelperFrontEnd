@@ -14,6 +14,10 @@ Router.map(function () {
     this.route('view');
     this.route('show', {path: '/:journal_id'});
   })
+  this.route('columns', function() {
+    this.route('view');
+    this.route('show', {path: '/:column_id'});
+  });
 })
 
 export default Router

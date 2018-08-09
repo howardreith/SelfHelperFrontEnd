@@ -4,9 +4,6 @@ import { inject as service } from '@ember/service'
 export default Route.extend({
   journal: service(),
   flashMessages: service(),
-  tagName: 'form',
-  classNames: ['form-horizontal'],
-  entry: {},
 
   actions: {
     updateJournalEntry (entry) {

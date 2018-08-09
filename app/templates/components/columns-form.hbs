@@ -1,0 +1,15 @@
+{{input type='hidden' value=columnEntry.id}}
+<h5>{{journalEntry.updated_at}}</h5>
+<h4>Event</h4>{{input value=columnEntry.event}}
+<h4>Emotion</h4>{{input value=columnEntry.emotion}}
+<h4>Automatic Thought</h4>{{input value=columnEntry.autothought}}
+<h4>Cognitive Distortion</h4>{{input value=columnEntry.distortion}}
+<h4>Rational Response</h4>{{input value=columnEntry.response}}
+
+<button type="submit" class="btn btn-primary" {{action "submit"}}>
+  Update Column Method
+</button>
+
+<button class="btn btn-default" {{action "cancel"}}>
+  Cancel
+</button>
