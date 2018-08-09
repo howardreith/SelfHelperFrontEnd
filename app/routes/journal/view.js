@@ -28,13 +28,13 @@ export default Route.extend({
       console.log('updateEntry was activated.')
       console.log('this is ', this)
       console.log('this.context is ', this.context)
-      const clickedRow = event.target.parentNode.parentNode.getElementsByTagName('td')[1].innerText
+      const clickedRow = event.target.parentNode.parentNode.getElementsByTagName('td')[0].innerText
       console.log('clickedRow is ', clickedRow)
       this.transitionTo('/journal/' + clickedRow)
     },
     deleteEntry() {
       console.log('deleteEntry was activated.')
-      const clickedRow = event.target.parentNode.parentNode.getElementsByTagName('td')[1].innerText
+      const clickedRow = event.target.parentNode.parentNode.getElementsByTagName('td')[0].innerText
       console.log('clickedRow is ', clickedRow)
       this.get('journal').deleteJournalEntry(clickedRow)
       .then(() => this.refresh())
