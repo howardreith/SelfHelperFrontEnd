@@ -62,7 +62,7 @@ As a user, I want...
 
 ### Screenshot
 
-[alt text](https://imgur.com/a/2KPLGE3)
+![alt text](https://imgur.com/a/2KPLGE3)
 
 ### Set Up and Installation
 
