@@ -62,6 +62,8 @@ As a user, I want...
 
 ### Screenshot
 
+![screenshot](https://imgur.com/a/2KPLGE3)
+
 ### Set Up and Installation
 
 The application is readily available simply by accessing https://github.com/howardreith/hotguydefrontend.
