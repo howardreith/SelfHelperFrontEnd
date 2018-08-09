@@ -61,8 +61,8 @@ export default Route.extend({
         for (i = 1; i < (rows.length - 1); i++) {
           console.log('this ran ', i, ' times')
           shouldSwitch = false
-          x = rows[i].getElementsByTagName('TD')[2]
-          y = rows[i + 1].getElementsByTagName('TD')[2]
+          x = rows[i].getElementsByTagName('TD')[1]
+          y = rows[i + 1].getElementsByTagName('TD')[1]
           // if (heading === 0 || heading === 3) {
           //   if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
           //     shouldSwitch = true

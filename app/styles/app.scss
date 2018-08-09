@@ -49,6 +49,27 @@
   text-align: center;
 }
 
+.columns-front {
+  text-align: center;
+}
+
+.columns-list-heading {
+  text-align: center;
+}
+
+#cognitive-distortions-heading {
+  display: inline-block;
+  margin-right: 3px;
+}
+
+.btn:focus ~ .distortions {
+  display: block;
+}
+
+#update-column-method-button {
+  margin-top: 8px;
+}
+
 /* The sidebar menu */
 .sidenav {
     height: 100%; /* Full-height: remove this if you want "auto" height */
