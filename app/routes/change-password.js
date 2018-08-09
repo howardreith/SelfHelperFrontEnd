@@ -31,6 +31,9 @@ export default Route.extend({
         this.get('flashMessages')
         .danger('Your new passwords must match.')
       }
+    },
+    cancel () {
+      this.transitionTo('journal')
     }
   }
 })

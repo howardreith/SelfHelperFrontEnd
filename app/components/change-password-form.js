@@ -13,6 +13,7 @@ export default Component.extend({
 
     reset () {
       this.set('passwords', {})
+      this.sendAction('cancel')
     }
   }
 })
