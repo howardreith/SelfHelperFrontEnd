@@ -7,16 +7,16 @@ export default Route.extend({
 
   model () {
     const response = this.get('columns').getColumnsEntries()
-    console.log ('response is ', response)
+    // console.log ('response is ', response)
     return response
     .then((result) => {
-      console.log('result is ', result.colum_methods)
+      // console.log('result is ', result.colum_methods)
       result.colum_methods.forEach((colum_method) => {
-        console.log('colum_method is ', colum_method)
+        // console.log('colum_method is ', colum_method)
         colum_method.updated_at = colum_method.updated_at.slice(0, -5).split('T').join('  ')
         colum_method.updated_at = colum_method.created_at.slice(0, -5).split('T').join('  ')
       })
-      console.log('result.colum_methods is ', result.colum_methods)
+      // console.log('result.colum_methods is ', result.colum_methods)
       return result.colum_methods
     })
   },
@@ -26,17 +26,17 @@ export default Route.extend({
       this.transitionTo('columns')
     },
     updateEntry() {
-      console.log('updateEntry was activated.')
-      console.log('this is ', this)
-      console.log('this.context is ', this.context)
+      // console.log('updateEntry was activated.')
+      // console.log('this is ', this)
+      // console.log('this.context is ', this.context)
       const clickedRow = event.target.parentNode.parentNode.getElementsByTagName('td')[0].innerText
-      console.log('clickedRow is ', clickedRow)
+      // console.log('clickedRow is ', clickedRow)
       this.transitionTo('/columns/' + clickedRow)
     },
     deleteEntry() {
-      console.log('deleteEntry was activated.')
+      // console.log('deleteEntry was activated.')
       const clickedRow = event.target.parentNode.parentNode.getElementsByTagName('td')[0].innerText
-      console.log('clickedRow is ', clickedRow)
+      // console.log('clickedRow is ', clickedRow)
       this.get('columns').deleteColumnsEntry(clickedRow)
       .then(() => this.refresh())
       .then(() => {
@@ -49,17 +49,17 @@ export default Route.extend({
       })
     },
     sortTable () {
-      console.log('sort table was activated')
+      // console.log('sort table was activated')
       let rows, i, x, y, shouldSwitch
       const table = document.getElementById('columns-table')
       let switching = true
       while (switching) {
         switching = false
         rows = table.getElementsByTagName('TR')
-        console.log('rows is ', rows)
-        console.log('rows.length is ', rows.length)
+        // console.log('rows is ', rows)
+        // console.log('rows.length is ', rows.length)
         for (i = 1; i < (rows.length - 1); i++) {
-          console.log('this ran ', i, ' times')
+          // console.log('this ran ', i, ' times')
           shouldSwitch = false
           x = rows[i].getElementsByTagName('TD')[1]
           y = rows[i + 1].getElementsByTagName('TD')[1]

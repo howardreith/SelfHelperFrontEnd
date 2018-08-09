@@ -12,7 +12,7 @@ export default Service.extend({
   isAuthenticated: bool('credentials.token'),
 
 createColumnsEntry () {
-  console.log('createColumnsEntry was called in the final stage')
+  // console.log('createColumnsEntry was called in the final stage')
   return this.get('ajax').post('/colum_methods', {
     data: {
       colum_method: {
@@ -27,22 +27,22 @@ createColumnsEntry () {
 },
 
 getColumnsEntries () {
-  console.log('getColumnMethods was run!')
+  // console.log('getColumnMethods was run!')
   const columnEntries = this.get('ajax').request('/colum_methods')
-  console.log(columnEntries)
+  // console.log(columnEntries)
   return columnEntries
 },
 
 getColumnsEntry (id) {
-  console.log('getColumnsEntry was run!')
+  // console.log('getColumnsEntry was run!')
   const columnEntry = this.get('ajax').request('/colum_methods/' + id)
-  console.log('columnEntry is ', columnEntry)
+  // console.log('columnEntry is ', columnEntry)
   return columnEntry
 },
 
 updateColumnsEntry (entry) {
-  console.log('updateColumnEntry was run in the service')
-  console.log('entry in the updateColumnEntry service is ', entry)
+  // console.log('updateColumnEntry was run in the service')
+  // console.log('entry in the updateColumnEntry service is ', entry)
   return this.get('ajax').patch('/colum_methods/' + entry.id, {
     data: {
       colum_method: {
@@ -56,8 +56,8 @@ updateColumnsEntry (entry) {
   })
 },
 deleteColumnsEntry (id) {
-  console.log('deleteColumnEntry was run in the service.')
-  console.log('id in the deleteColumnEntry service is ', id)
+  // console.log('deleteColumnEntry was run in the service.')
+  // console.log('id in the deleteColumnEntry service is ', id)
   return this.get('ajax').del('/colum_methods/' + id)
 }
 })

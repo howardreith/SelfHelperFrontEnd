@@ -6,7 +6,7 @@ export default Component.extend({
 
   actions: {
     submit () {
-      console.log('get-journal-entries-form did something.')
+      // console.log('get-journal-entries-form did something.')
       this.sendAction('submit')
     }
   }

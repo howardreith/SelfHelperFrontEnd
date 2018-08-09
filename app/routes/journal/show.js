@@ -7,7 +7,7 @@ export default Route.extend({
 
   actions: {
     updateJournalEntry (entry) {
-      console.log('entry in show.js is ', entry)
+      // console.log('entry in show.js is ', entry)
       this.get('journal').updateJournalEntry(entry)
       .then(() => this.refresh())
       .then(() => {
@@ -26,11 +26,11 @@ export default Route.extend({
 
   model (params) {
     const response = this.get('journal').getJournalEntry(params.journal_id)
-    console.log ('response is ', response)
+    // console.log ('response is ', response)
     return response
     .then((result) => {
-      console.log('result is', result)
-      console.log('result.journal_entry is ', result.journal_entry)
+      // console.log('result is', result)
+      // console.log('result.journal_entry is ', result.journal_entry)
       result.journal_entry.updated_at = result.journal_entry.updated_at.slice(0, -5).split('T').join('  ')
       return result.journal_entry
     })
