@@ -68,4 +68,4 @@ As a user, I want...
 
 The application is readily available simply by accessing https://github.com/howardreith/hotguydefrontend.
 
-Once the user has signed up and signed in, the app is fully available for use.
+To operate locally, you must fork and clone both the front and back-end repositories into separate folders. Run npm install on the front end repository and bundle install on the back end. To boot your back-end server, run bin/rails server which will launch of port 4741. To boot your back-end server, run ember install in the main directory. This will run a server on port 7165. Navigate to localhost:7165 in your browser and you should have full local access to the application.
