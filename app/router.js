@@ -18,6 +18,10 @@ Router.map(function () {
     this.route('view');
     this.route('show', {path: '/:column_id'});
   });
+  this.route('arrows', function() {
+    this.route('view');
+    this.route('show', {path: '/:arrow_id'});
+  });
 })
 
 export default Router

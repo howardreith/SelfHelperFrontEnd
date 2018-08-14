@@ -1,0 +1,31 @@
+{{left-nav-arrows}}
+
+<div id="arrows-list" class='arrows-list-container'>
+  <div class='arrows-list-heading'>
+    <h3>Downward Arrow Entries</h3>
+  </div>
+  <table id='arrows-table' class='table table-striped'>
+    <thead>
+      <tr>
+        {{!-- <th id='starred-heading'>Starred</th> --}}
+        <th id='arrows-id-heading' {{action 'sortTable'}}>ID</th>
+        <th id='arrows-date-created-heading'>Date Created</th>
+        <th id='arrows-event-heading'>First Automatic Thought</th>
+        <th id='arrows-update-heading'>Update</th>
+        <th id='arrows-delete-heading'>Delete</th>
+      </tr>
+    </thead>
+    <tbody id='arrows-table-body'>
+    {{#each model as |downward_arrow|}}
+      <tr class="file-row" data-id="{{downward_arrow.id}}">
+      {{!-- <td>{{journalEntry.starred}}</td> --}}
+      <td>{{downward_arrow.id}}</td>
+      <td>{{downward_arrow.updated_at}}</td>
+      <td>{{downward_arrow.autothought1}}</td>
+      <td><button class='btn-info' {{action "updateEntry"}}>Update</button></td>
+      <td><button class='btn-danger'{{action "deleteEntry"}}>Delete</button></td>
+      </tr>
+    {{/each}}
+  </tbody>
+  </table>
+</div>

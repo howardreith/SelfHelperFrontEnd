@@ -2,28 +2,28 @@ import Route from '@ember/routing/route';
 import { inject as service } from '@ember/service'
 
 export default Route.extend({
-  columns: service(),
+  arrows: service(),
   flashMessages: service(),
 
   model () {
-    const response = this.get('columns').getColumnsEntries()
+    const response = this.get('arrows').getArrowsEntries()
     // console.log ('response is ', response)
     return response
     .then((result) => {
-      // console.log('result is ', result.colum_methods)
-      result.colum_methods.forEach((colum_method) => {
-        // console.log('colum_method is ', colum_method)
-        colum_method.updated_at = colum_method.updated_at.slice(0, -5).split('T').join('  ')
-        colum_method.updated_at = colum_method.created_at.slice(0, -5).split('T').join('  ')
+      // console.log('result is ', result.downward_arrow)
+      result.downward_arrows.forEach((downward_arrow) => {
+        // console.log('downward_arrow is ', downward_arrow)
+        downward_arrow.updated_at = downward_arrow.updated_at.slice(0, -5).split('T').join('  ')
+        downward_arrow.updated_at = downward_arrow.created_at.slice(0, -5).split('T').join('  ')
       })
-      // console.log('result.colum_methods is ', result.colum_methods)
-      return result.colum_methods
+      // console.log('result.downward_arrows is ', result.downward_arrows)
+      return result.downward_arrows
     })
   },
 
   actions: {
-    goToColumns() {
-      this.transitionTo('columns')
+    goToArrows() {
+      this.transitionTo('arrows')
     },
     updateEntry() {
       // console.log('updateEntry was activated.')
@@ -31,17 +31,17 @@ export default Route.extend({
       // console.log('this.context is ', this.context)
       const clickedRow = event.target.parentNode.parentNode.getElementsByTagName('td')[0].innerText
       // console.log('clickedRow is ', clickedRow)
-      this.transitionTo('/columns/' + clickedRow)
+      this.transitionTo('/arrows/' + clickedRow)
     },
     deleteEntry() {
       // console.log('deleteEntry was activated.')
       const clickedRow = event.target.parentNode.parentNode.getElementsByTagName('td')[0].innerText
       // console.log('clickedRow is ', clickedRow)
-      this.get('columns').deleteColumnsEntry(clickedRow)
+      this.get('arrows').deleteArrowsEntry(clickedRow)
       .then(() => this.refresh())
       .then(() => {
         this.get('flashMessages')
-        .success('Successfully deleted columns method entry.')
+        .success('Successfully deleted arrows entry.')
       })
       .catch(() => {
         this.get('flashMessages')
@@ -51,7 +51,7 @@ export default Route.extend({
     sortTable () {
       // console.log('sort table was activated')
       let rows, i, x, y, shouldSwitch
-      const table = document.getElementById('columns-table')
+      const table = document.getElementById('arrows-table')
       let switching = true
       while (switching) {
         switching = false

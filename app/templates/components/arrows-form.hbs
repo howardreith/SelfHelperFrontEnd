@@ -1,0 +1,13 @@
+{{input type='hidden' value=arrowsEntry.id}}
+<h5>{{arrowEntry.updated_at}}</h5>
+<h4>Automatic Thought</h4>{{textarea value=arrowsEntry.autothought1}}
+<h4>Cognitive Distortion</h4>{{input value=arrowsEntry.distortion1}}
+<h4>Response</h4>{{textarea value=arrowsEntry.response1}}
+
+<button type="submit" class="btn btn-primary" {{action "submit"}}>
+  Update Downward Arrow Entry
+</button>
+
+<button class="btn btn-default" {{action "cancel"}}>
+  Cancel
+</button>
