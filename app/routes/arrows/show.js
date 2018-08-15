@@ -27,11 +27,11 @@ export default Route.extend({
   model (params) {
     console.log('params is ', params)
     const response = this.get('arrows').getArrowsEntry(params.arrow_id)
-    console.log ('response is ', response)
+    console.log('response is ', response)
     return response
     .then((result) => {
-      // console.log('result is', result)
-      // console.log('result.colum_method is ', result.colum_method)
+      console.log('result is', result)
+      console.log('result.downward_arrow is ', result.downward_arrow)
       result.downward_arrow.updated_at = result.downward_arrow.updated_at.slice(0, -5).split('T').join('  ')
       return result.downward_arrow
     })

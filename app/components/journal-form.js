@@ -19,7 +19,7 @@ export default Component.extend({
       this.sendAction('submit', this.get('entry'))
     },
     cancel () {
-      this.sendAction ('cancel')
+      this.sendAction('cancel')
     }
   }
 })
