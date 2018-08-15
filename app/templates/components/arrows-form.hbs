@@ -1,8 +1,301 @@
 {{input type='hidden' value=arrowsEntry.id}}
 <h5>{{arrowEntry.updated_at}}</h5>
-<h4>Automatic Thought</h4>{{textarea value=arrowsEntry.autothought1}}
-<h4>Cognitive Distortion</h4>{{input value=arrowsEntry.distortion1}}
-<h4>Response</h4>{{textarea value=arrowsEntry.response1}}
+<div id='arrow-layer-1'>
+  <div class='autothought col-sm-4'>
+    <h4>Automatic Thought</h4>{{textarea value=arrowsEntry.autothought1}}
+  </div>
+  <div class='distortion col-sm-4'>
+    <h4>Cognitive Distortion</h4>{{textarea value=arrowsEntry.distortion1}}
+  </div>
+  <div class='response col-sm-4'>
+    <h4>Response</h4>{{textarea value=arrowsEntry.response1}}<br>
+  </div>
+  <div class='next-layer-button text-center'>
+    <button class="btn btn-info" {{action "show2"}}>Next Layer</button>
+  </div>
+</div>
+
+<div id='arrow-layer-2' class='hidden'>
+  <div class='autothought col-sm-4'>
+    <h4>Automatic Thought</h4>{{textarea value=arrowsEntry.autothought2}}
+  </div>
+  <div class='distortion col-sm-4'>
+    <h4>Cognitive Distortion</h4>{{textarea value=arrowsEntry.distortion2}}
+  </div>
+  <div class='response col-sm-4'>
+    <h4>Response</h4>{{textarea value=arrowsEntry.response2}}<br>
+  </div>
+  <div class='next-layer-button text-center'>
+    <button class="btn btn-info" {{action "show3"}}>Next Layer</button>
+  </div>
+</div>
+
+<div id='arrow-layer-3' class='hidden'>
+  <div class='autothought col-sm-4'>
+    <h4>Automatic Thought</h4>{{textarea value=arrowsEntry.autothought3}}
+  </div>
+  <div class='distortion col-sm-4'>
+    <h4>Cognitive Distortion</h4>{{textarea value=arrowsEntry.distortion3}}
+  </div>
+  <div class='response col-sm-4'>
+    <h4>Response</h4>{{textarea value=arrowsEntry.response3}}<br>
+  </div>
+  <div class='next-layer-button text-center'>
+    <button class="btn btn-info" {{action "show4"}}>Next Layer</button>
+  </div>
+</div>
+
+<div id='arrow-layer-4' class='hidden'>
+  <div class='autothought col-sm-4'>
+    <h4>Automatic Thought</h4>{{textarea value=arrowsEntry.autothought4}}
+  </div>
+  <div class='distortion col-sm-4'>
+    <h4>Cognitive Distortion</h4>{{textarea value=arrowsEntry.distortion4}}
+  </div>
+  <div class='response col-sm-4'>
+    <h4>Response</h4>{{textarea value=arrowsEntry.response4}}<br>
+  </div>
+  <div class='next-layer-button text-center'>
+    <button class="btn btn-info" {{action "show5"}}>Next Layer</button>
+  </div>
+</div>
+
+<div id='arrow-layer-5' class='hidden'>
+  <div class='autothought col-sm-4'>
+    <h4>Automatic Thought</h4>{{textarea value=arrowsEntry.autothought5}}
+  </div>
+  <div class='distortion col-sm-4'>
+    <h4>Cognitive Distortion</h4>{{textarea value=arrowsEntry.distortion5}}
+  </div>
+  <div class='response col-sm-4'>
+    <h4>Response</h4>{{textarea value=arrowsEntry.response5}}<br>
+  </div>
+  <div class='next-layer-button text-center'>
+    <button class="btn btn-info" {{action "show6"}}>Next Layer</button>
+  </div>
+</div>
+
+<div id='arrow-layer-6' class='hidden'>
+  <div class='autothought col-sm-4'>
+    <h4>Automatic Thought</h4>{{textarea value=arrowsEntry.autothought6}}
+  </div>
+  <div class='distortion col-sm-4'>
+    <h4>Cognitive Distortion</h4>{{textarea value=arrowsEntry.distortion6}}
+  </div>
+  <div class='response col-sm-4'>
+    <h4>Response</h4>{{textarea value=arrowsEntry.response6}}<br>
+  </div>
+  <div class='next-layer-button text-center'>
+    <button class="btn btn-info" {{action "show7"}}>Next Layer</button>
+  </div>
+</div>
+
+<div id='arrow-layer-7' class='hidden'>
+  <div class='autothought col-sm-4'>
+    <h4>Automatic Thought</h4>{{textarea value=arrowsEntry.autothought7}}
+  </div>
+  <div class='distortion col-sm-4'>
+    <h4>Cognitive Distortion</h4>{{textarea value=arrowsEntry.distortion7}}
+  </div>
+  <div class='response col-sm-4'>
+    <h4>Response</h4>{{textarea value=arrowsEntry.response7}}<br>
+  </div>
+  <div class='next-layer-button text-center'>
+    <button class="btn btn-info" {{action "show8"}}>Next Layer</button>
+  </div>
+</div>
+
+<div id='arrow-layer-8' class='hidden'>
+  <div class='autothought col-sm-4'>
+    <h4>Automatic Thought</h4>{{textarea value=arrowsEntry.autothought8}}
+  </div>
+  <div class='distortion col-sm-4'>
+    <h4>Cognitive Distortion</h4>{{textarea value=arrowsEntry.distortion8}}
+  </div>
+  <div class='response col-sm-4'>
+    <h4>Response</h4>{{textarea value=arrowsEntry.response8}}<br>
+  </div>
+  <div class='next-layer-button text-center'>
+    <button class="btn btn-info" {{action "show9"}}>Next Layer</button>
+  </div>
+</div>
+
+<div id='arrow-layer-9' class='hidden'>
+  <div class='autothought col-sm-4'>
+    <h4>Automatic Thought</h4>{{textarea value=arrowsEntry.autothought9}}
+  </div>
+  <div class='distortion col-sm-4'>
+    <h4>Cognitive Distortion</h4>{{textarea value=arrowsEntry.distortion9}}
+  </div>
+  <div class='response col-sm-4'>
+    <h4>Response</h4>{{textarea value=arrowsEntry.response9}}<br>
+  </div>
+  <div class='next-layer-button text-center'>
+    <button class="btn btn-info" {{action "show10"}}>Next Layer</button>
+  </div>
+</div>
+
+<div id='arrow-layer-10' class='hidden'>
+  <div class='autothought col-sm-4'>
+    <h4>Automatic Thought</h4>{{textarea value=arrowsEntry.autothought10}}
+  </div>
+  <div class='distortion col-sm-4'>
+    <h4>Cognitive Distortion</h4>{{textarea value=arrowsEntry.distortion10}}
+  </div>
+  <div class='response col-sm-4'>
+    <h4>Response</h4>{{textarea value=arrowsEntry.response10}}<br>
+  </div>
+  <div class='next-layer-button text-center'>
+    <button class="btn btn-info" {{action "show11"}}>Next Layer</button>
+  </div>
+</div>
+
+<div id='arrow-layer-11' class='hidden'>
+  <div class='autothought col-sm-4'>
+    <h4>Automatic Thought</h4>{{textarea value=arrowsEntry.autothought11}}
+  </div>
+  <div class='distortion col-sm-4'>
+    <h4>Cognitive Distortion</h4>{{textarea value=arrowsEntry.distortion11}}
+  </div>
+  <div class='response col-sm-4'>
+    <h4>Response</h4>{{textarea value=arrowsEntry.response11}}<br>
+  </div>
+  <div class='next-layer-button text-center'>
+    <button class="btn btn-info" {{action "show12"}}>Next Layer</button>
+  </div>
+</div>
+
+<div id='arrow-layer-12' class='hidden'>
+  <div class='autothought col-sm-4'>
+    <h4>Automatic Thought</h4>{{textarea value=arrowsEntry.autothought12}}
+  </div>
+  <div class='distortion col-sm-4'>
+    <h4>Cognitive Distortion</h4>{{textarea value=arrowsEntry.distortion12}}
+  </div>
+  <div class='response col-sm-4'>
+    <h4>Response</h4>{{textarea value=arrowsEntry.response12}}<br>
+  </div>
+  <div class='next-layer-button text-center'>
+    <button class="btn btn-info" {{action "show13"}}>Next Layer</button>
+  </div>
+</div>
+
+<div id='arrow-layer-13' class='hidden'>
+  <div class='autothought col-sm-4'>
+    <h4>Automatic Thought</h4>{{textarea value=arrowsEntry.autothought13}}
+  </div>
+  <div class='distortion col-sm-4'>
+    <h4>Cognitive Distortion</h4>{{textarea value=arrowsEntry.distortion13}}
+  </div>
+  <div class='response col-sm-4'>
+    <h4>Response</h4>{{textarea value=arrowsEntry.response13}}<br>
+  </div>
+  <div class='next-layer-button text-center'>
+    <button class="btn btn-info" {{action "show14"}}>Next Layer</button>
+  </div>
+</div>
+
+<div id='arrow-layer-14' class='hidden'>
+  <div class='autothought col-sm-4'>
+    <h4>Automatic Thought</h4>{{textarea value=arrowsEntry.autothought14}}
+  </div>
+  <div class='distortion col-sm-4'>
+    <h4>Cognitive Distortion</h4>{{textarea value=arrowsEntry.distortion14}}
+  </div>
+  <div class='response col-sm-4'>
+    <h4>Response</h4>{{textarea value=arrowsEntry.response14}}<br>
+  </div>
+  <div class='next-layer-button text-center'>
+    <button class="btn btn-info" {{action "show15"}}>Next Layer</button>
+  </div>
+</div>
+
+<div id='arrow-layer-15' class='hidden'>
+  <div class='autothought col-sm-4'>
+    <h4>Automatic Thought</h4>{{textarea value=arrowsEntry.autothought15}}
+  </div>
+  <div class='distortion col-sm-4'>
+    <h4>Cognitive Distortion</h4>{{textarea value=arrowsEntry.distortion15}}
+  </div>
+  <div class='response col-sm-4'>
+    <h4>Response</h4>{{textarea value=arrowsEntry.response15}}<br>
+  </div>
+  <div class='next-layer-button text-center'>
+    <button class="btn btn-info" {{action "show16"}}>Next Layer</button>
+  </div>
+</div>
+
+<div id='arrow-layer-16' class='hidden'>
+  <div class='autothought col-sm-4'>
+    <h4>Automatic Thought</h4>{{textarea value=arrowsEntry.autothought16}}
+  </div>
+  <div class='distortion col-sm-4'>
+    <h4>Cognitive Distortion</h4>{{textarea value=arrowsEntry.distortion16}}
+  </div>
+  <div class='response col-sm-4'>
+    <h4>Response</h4>{{textarea value=arrowsEntry.response16}}<br>
+  </div>
+  <div class='next-layer-button text-center'>
+    <button class="btn btn-info" {{action "show17"}}>Next Layer</button>
+  </div>
+</div>
+
+<div id='arrow-layer-17' class='hidden'>
+  <div class='autothought col-sm-4'>
+    <h4>Automatic Thought</h4>{{textarea value=arrowsEntry.autothought17}}
+  </div>
+  <div class='distortion col-sm-4'>
+    <h4>Cognitive Distortion</h4>{{textarea value=arrowsEntry.distortion17}}
+  </div>
+  <div class='response col-sm-4'>
+    <h4>Response</h4>{{textarea value=arrowsEntry.response17}}<br>
+  </div>
+  <div class='next-layer-button text-center'>
+    <button class="btn btn-info" {{action "show18"}}>Next Layer</button>
+  </div>
+</div>
+
+<div id='arrow-layer-18' class='hidden'>
+  <div class='autothought col-sm-4'>
+    <h4>Automatic Thought</h4>{{textarea value=arrowsEntry.autothought18}}
+  </div>
+  <div class='distortion col-sm-4'>
+    <h4>Cognitive Distortion</h4>{{textarea value=arrowsEntry.distortion18}}
+  </div>
+  <div class='response col-sm-4'>
+    <h4>Response</h4>{{textarea value=arrowsEntry.response18}}<br>
+  </div>
+  <div class='next-layer-button text-center'>
+    <button class="btn btn-info" {{action "show19"}}>Next Layer</button>
+  </div>
+</div>
+
+<div id='arrow-layer-19' class='hidden'>
+  <div class='autothought col-sm-4'>
+    <h4>Automatic Thought</h4>{{textarea value=arrowsEntry.autothought19}}
+  </div>
+  <div class='distortion col-sm-4'>
+    <h4>Cognitive Distortion</h4>{{textarea value=arrowsEntry.distortion19}}
+  </div>
+  <div class='response col-sm-4'>
+    <h4>Response</h4>{{textarea value=arrowsEntry.response19}}<br>
+  </div>
+  <div class='next-layer-button text-center'>
+    <button class="btn btn-info" {{action "show20"}}>Next Layer</button>
+  </div>
+</div>
+
+<div id='arrow-layer-20' class='hidden'>
+  <div class='autothought col-sm-4'>
+    <h4>Automatic Thought</h4>{{textarea value=arrowsEntry.autothought20}}
+  </div>
+  <div class='distortion col-sm-4'>
+    <h4>Cognitive Distortion</h4>{{textarea value=arrowsEntry.distortion20}}
+  </div>
+  <div class='response col-sm-4'>
+    <h4>Response</h4>{{textarea value=arrowsEntry.response20}}<br>
+  </div>
+</div>
 
 <button type="submit" class="btn btn-primary" {{action "submit"}}>
   Update Downward Arrow Entry
