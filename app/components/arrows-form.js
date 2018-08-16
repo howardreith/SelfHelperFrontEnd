@@ -78,12 +78,16 @@ export default Component.extend({
       console.log('entry is ', this.get('entry'))
       this.sendAction('submit', this.get('entry'))
     },
+    toggleShow2 () {
+      this.toggleProperty('isShowing')
+    },
     cancel () {
       this.sendAction('cancel')
     },
-    show2 () {
-      document.getElementById('arrow-layer-2').setAttribute('class', '')
-    },
+    // show2 () {
+    //   this.set('arrowsEntry.response2', ' ')
+    //   // document.getElementById('arrow-layer-2').setAttribute('display', 'block')
+    // },
     show3 () {
       document.getElementById('arrow-layer-3').setAttribute('class', '')
     },

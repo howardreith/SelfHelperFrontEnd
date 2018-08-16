@@ -33,6 +33,7 @@ export default Route.extend({
       console.log('result is', result)
       console.log('result.downward_arrow is ', result.downward_arrow)
       result.downward_arrow.updated_at = result.downward_arrow.updated_at.slice(0, -5).split('T').join('  ')
+      console.log('result.downward_arrow.response2 is ', result.downward_arrow.response2)
       return result.downward_arrow
     })
     .catch(() => {

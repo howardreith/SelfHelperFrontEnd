@@ -1,4 +1,3 @@
-{{input type='hidden' value=arrowsEntry.id}}
 <h5>{{arrowEntry.updated_at}}</h5>
 <div id='arrow-layer-1'>
   <div class='autothought col-sm-4'>
@@ -11,11 +10,12 @@
     <h4>Response</h4>{{textarea value=arrowsEntry.response1}}<br>
   </div>
   <div class='next-layer-button text-center'>
-    <button class="btn btn-info" {{action "show2"}}>Next Layer</button>
+    <button class="btn btn-info" {{action "toggleShow2"}}>Next Layer</button>
   </div>
 </div>
 
-<div id='arrow-layer-2' class='hidden'>
+{{#if arrowsEntry.response2}}
+<div id='arrow-layer-2'>
   <div class='autothought col-sm-4'>
     <h4>Automatic Thought</h4>{{textarea value=arrowsEntry.autothought2}}
   </div>
@@ -29,6 +29,24 @@
     <button class="btn btn-info" {{action "show3"}}>Next Layer</button>
   </div>
 </div>
+{{else}}
+  {{#if isShowing}}
+  <div id='arrow-layer-2'>
+    <div class='autothought col-sm-4'>
+      <h4>Automatic Thought</h4>{{textarea value=arrowsEntry.autothought2}}
+    </div>
+    <div class='distortion col-sm-4'>
+      <h4>Cognitive Distortion</h4>{{textarea value=arrowsEntry.distortion2}}
+    </div>
+    <div class='response col-sm-4'>
+      <h4>Response</h4>{{textarea value=arrowsEntry.response2}}<br>
+    </div>
+    <div class='next-layer-button text-center'>
+      <button class="btn btn-info" {{action "show3"}}>Next Layer</button>
+    </div>
+  </div>
+  {{/if}}
+{{/if}}
 
 <div id='arrow-layer-3' class='hidden'>
   <div class='autothought col-sm-4'>
