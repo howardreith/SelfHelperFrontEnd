@@ -1,5 +1,5 @@
 <h5>{{arrowEntry.updated_at}}</h5>
-<div id='arrow-layer-1'>
+<div id='arrow-layer-1' class='text-center'>
   <div class='autothought col-sm-4'>
     <h4>Automatic Thought</h4>{{textarea value=arrowsEntry.autothought1}}
   </div>
@@ -15,7 +15,10 @@
 </div>
 
 {{#if arrowsEntry.autothought2}}
-<div id='arrow-layer-2'>
+<div class='suppose wrapper text-center'>
+  <h4>Suppose your automatic thought were true. What would that mean?</h4>
+</div>
+<div id='arrow-layer-2' class='text-center'>
   <div class='autothought col-sm-4'>
     <h4>Automatic Thought</h4>{{textarea value=arrowsEntry.autothought2}}
   </div>
@@ -31,7 +34,10 @@
 </div>
 {{else}}
   {{#if 2isShowing}}
-  <div id='arrow-layer-2'>
+  <div class='suppose wrapper text-center'>
+    <h4>Suppose your automatic thought were true. What would that mean?</h4>
+  </div>
+  <div id='arrow-layer-2' class='text-center'>
     <div class='autothought col-sm-4'>
       <h4>Automatic Thought</h4>{{textarea value=arrowsEntry.autothought2}}
     </div>
@@ -49,7 +55,10 @@
 {{/if}}
 
 {{#if arrowsEntry.autothought3}}
-<div id='arrow-layer-3'>
+<div class='suppose wrapper text-center'>
+  <h4>Suppose your automatic thought were true. What would that mean?</h4>
+</div>
+<div id='arrow-layer-3' class='text-center'>
   <div class='autothought col-sm-4'>
     <h4>Automatic Thought</h4>{{textarea value=arrowsEntry.autothought3}}
   </div>
@@ -65,7 +74,10 @@
 </div>
 {{else}}
   {{#if 3isShowing}}
-  <div id='arrow-layer-3'>
+  <div class='suppose wrapper text-center'>
+    <h4>Suppose your automatic thought were true. What would that mean?</h4>
+  </div>
+  <div id='arrow-layer-3' class='text-center'>
     <div class='autothought col-sm-4'>
       <h4>Automatic Thought</h4>{{textarea value=arrowsEntry.autothought3}}
     </div>
@@ -82,7 +94,11 @@
   {{/if}}
 {{/if}}
 
-<div id='arrow-layer-4' class='hidden'>
+{{#if arrowsEntry.autothought4}}
+<div class='suppose wrapper text-center'>
+  <h4>Suppose your automatic thought were true. What would that mean?</h4>
+</div>
+<div id='arrow-layer-4' class='text-center'>
   <div class='autothought col-sm-4'>
     <h4>Automatic Thought</h4>{{textarea value=arrowsEntry.autothought4}}
   </div>
@@ -96,8 +112,33 @@
     <button class="btn btn-info" {{action "show5"}}>Next Layer</button>
   </div>
 </div>
+{{else}}
+  {{#if 4isShowing}}
+  <div class='suppose wrapper text-center'>
+    <h4>Suppose your automatic thought were true. What would that mean?</h4>
+  </div>
+  <div id='arrow-layer-4' class='text-center'>
+    <div class='autothought col-sm-4'>
+      <h4>Automatic Thought</h4>{{textarea value=arrowsEntry.autothought4}}
+    </div>
+    <div class='distortion col-sm-4'>
+      <h4>Cognitive Distortion</h4>{{textarea value=arrowsEntry.distortion4}}
+    </div>
+    <div class='response col-sm-4'>
+      <h4>Response</h4>{{textarea value=arrowsEntry.response4}}<br>
+    </div>
+    <div class='next-layer-button text-center'>
+      <button class="btn btn-info" {{action "show5"}}>Next Layer</button>
+    </div>
+  </div>
+  {{/if}}
+{{/if}}
 
-<div id='arrow-layer-5' class='hidden'>
+{{#if arrowsEntry.autothought5}}
+<div class='suppose wrapper text-center'>
+  <h4>Suppose your automatic thought were true. What would that mean?</h4>
+</div>
+<div id='arrow-layer-5' class='text-center'>
   <div class='autothought col-sm-4'>
     <h4>Automatic Thought</h4>{{textarea value=arrowsEntry.autothought5}}
   </div>
@@ -111,8 +152,33 @@
     <button class="btn btn-info" {{action "show6"}}>Next Layer</button>
   </div>
 </div>
+{{else}}
+  {{#if 5isShowing}}
+  <div class='suppose wrapper text-center'>
+    <h4>Suppose your automatic thought were true. What would that mean?</h4>
+  </div>
+  <div id='arrow-layer-5' class='text-center'>
+    <div class='autothought col-sm-4'>
+      <h4>Automatic Thought</h4>{{textarea value=arrowsEntry.autothought5}}
+    </div>
+    <div class='distortion col-sm-4'>
+      <h4>Cognitive Distortion</h4>{{textarea value=arrowsEntry.distortion5}}
+    </div>
+    <div class='response col-sm-4'>
+      <h4>Response</h4>{{textarea value=arrowsEntry.response5}}<br>
+    </div>
+    <div class='next-layer-button text-center'>
+      <button class="btn btn-info" {{action "show6"}}>Next Layer</button>
+    </div>
+  </div>
+  {{/if}}
+{{/if}}
 
-<div id='arrow-layer-6' class='hidden'>
+{{#if arrowsEntry.autothought6}}
+<div class='suppose wrapper text-center'>
+  <h4>Suppose your automatic thought were true. What would that mean?</h4>
+</div>
+<div id='arrow-layer-6' class='text-center'>
   <div class='autothought col-sm-4'>
     <h4>Automatic Thought</h4>{{textarea value=arrowsEntry.autothought6}}
   </div>
@@ -126,8 +192,33 @@
     <button class="btn btn-info" {{action "show7"}}>Next Layer</button>
   </div>
 </div>
+{{else}}
+  {{#if 6isShowing}}
+  <div class='suppose wrapper text-center'>
+    <h4>Suppose your automatic thought were true. What would that mean?</h4>
+  </div>
+  <div id='arrow-layer-6' class='text-center'>
+    <div class='autothought col-sm-4'>
+      <h4>Automatic Thought</h4>{{textarea value=arrowsEntry.autothought6}}
+    </div>
+    <div class='distortion col-sm-4'>
+      <h4>Cognitive Distortion</h4>{{textarea value=arrowsEntry.distortion6}}
+    </div>
+    <div class='response col-sm-4'>
+      <h4>Response</h4>{{textarea value=arrowsEntry.response6}}<br>
+    </div>
+    <div class='next-layer-button text-center'>
+      <button class="btn btn-info" {{action "show7"}}>Next Layer</button>
+    </div>
+  </div>
+  {{/if}}
+{{/if}}
 
-<div id='arrow-layer-7' class='hidden'>
+{{#if arrowsEntry.autothought7}}
+<div class='suppose wrapper text-center'>
+  <h4>Suppose your automatic thought were true. What would that mean?</h4>
+</div>
+<div id='arrow-layer-7' class='text-center'>
   <div class='autothought col-sm-4'>
     <h4>Automatic Thought</h4>{{textarea value=arrowsEntry.autothought7}}
   </div>
@@ -141,8 +232,33 @@
     <button class="btn btn-info" {{action "show8"}}>Next Layer</button>
   </div>
 </div>
+{{else}}
+  {{#if 7isShowing}}
+  <div class='suppose wrapper text-center'>
+    <h4>Suppose your automatic thought were true. What would that mean?</h4>
+  </div>
+  <div id='arrow-layer-7' class='text-center'>
+    <div class='autothought col-sm-4'>
+      <h4>Automatic Thought</h4>{{textarea value=arrowsEntry.autothought7}}
+    </div>
+    <div class='distortion col-sm-4'>
+      <h4>Cognitive Distortion</h4>{{textarea value=arrowsEntry.distortion7}}
+    </div>
+    <div class='response col-sm-4'>
+      <h4>Response</h4>{{textarea value=arrowsEntry.response7}}<br>
+    </div>
+    <div class='next-layer-button text-center'>
+      <button class="btn btn-info" {{action "show8"}}>Next Layer</button>
+    </div>
+  </div>
+  {{/if}}
+{{/if}}
 
-<div id='arrow-layer-8' class='hidden'>
+{{#if arrowsEntry.autothought8}}
+<div class='suppose wrapper text-center'>
+  <h4>Suppose your automatic thought were true. What would that mean?</h4>
+</div>
+<div id='arrow-layer-8' class='text-center'>
   <div class='autothought col-sm-4'>
     <h4>Automatic Thought</h4>{{textarea value=arrowsEntry.autothought8}}
   </div>
@@ -156,8 +272,33 @@
     <button class="btn btn-info" {{action "show9"}}>Next Layer</button>
   </div>
 </div>
+{{else}}
+  {{#if 8isShowing}}
+  <div class='suppose wrapper text-center'>
+    <h4>Suppose your automatic thought were true. What would that mean?</h4>
+  </div>
+  <div id='arrow-layer-8' class='text-center'>
+    <div class='autothought col-sm-4'>
+      <h4>Automatic Thought</h4>{{textarea value=arrowsEntry.autothought8}}
+    </div>
+    <div class='distortion col-sm-4'>
+      <h4>Cognitive Distortion</h4>{{textarea value=arrowsEntry.distortion8}}
+    </div>
+    <div class='response col-sm-4'>
+      <h4>Response</h4>{{textarea value=arrowsEntry.response8}}<br>
+    </div>
+    <div class='next-layer-button text-center'>
+      <button class="btn btn-info" {{action "show9"}}>Next Layer</button>
+    </div>
+  </div>
+  {{/if}}
+{{/if}}
 
-<div id='arrow-layer-9' class='hidden'>
+{{#if arrowsEntry.autothought9}}
+<div class='suppose wrapper text-center'>
+  <h4>Suppose your automatic thought were true. What would that mean?</h4>
+</div>
+<div id='arrow-layer-9' class='text-center'>
   <div class='autothought col-sm-4'>
     <h4>Automatic Thought</h4>{{textarea value=arrowsEntry.autothought9}}
   </div>
@@ -171,8 +312,33 @@
     <button class="btn btn-info" {{action "show10"}}>Next Layer</button>
   </div>
 </div>
+{{else}}
+  {{#if 9isShowing}}
+  <div class='suppose wrapper text-center'>
+    <h4>Suppose your automatic thought were true. What would that mean?</h4>
+  </div>
+  <div id='arrow-layer-9' class='text-center'>
+    <div class='autothought col-sm-4'>
+      <h4>Automatic Thought</h4>{{textarea value=arrowsEntry.autothought9}}
+    </div>
+    <div class='distortion col-sm-4'>
+      <h4>Cognitive Distortion</h4>{{textarea value=arrowsEntry.distortion9}}
+    </div>
+    <div class='response col-sm-4'>
+      <h4>Response</h4>{{textarea value=arrowsEntry.response9}}<br>
+    </div>
+    <div class='next-layer-button text-center'>
+      <button class="btn btn-info" {{action "show10"}}>Next Layer</button>
+    </div>
+  </div>
+  {{/if}}
+{{/if}}
 
-<div id='arrow-layer-10' class='hidden'>
+{{#if arrowsEntry.autothought10}}
+<div class='suppose wrapper text-center'>
+  <h4>Suppose your automatic thought were true. What would that mean?</h4>
+</div>
+<div id='arrow-layer-10' class='text-center'>
   <div class='autothought col-sm-4'>
     <h4>Automatic Thought</h4>{{textarea value=arrowsEntry.autothought10}}
   </div>
@@ -186,6 +352,27 @@
     <button class="btn btn-info" {{action "show11"}}>Next Layer</button>
   </div>
 </div>
+{{else}}
+  {{#if 10isShowing}}
+  <div class='suppose wrapper text-center'>
+    <h4>Suppose your automatic thought were true. What would that mean?</h4>
+  </div>
+  <div id='arrow-layer-10' class='text-center'>
+    <div class='autothought col-sm-4'>
+      <h4>Automatic Thought</h4>{{textarea value=arrowsEntry.autothought10}}
+    </div>
+    <div class='distortion col-sm-4'>
+      <h4>Cognitive Distortion</h4>{{textarea value=arrowsEntry.distortion10}}
+    </div>
+    <div class='response col-sm-4'>
+      <h4>Response</h4>{{textarea value=arrowsEntry.response10}}<br>
+    </div>
+    <div class='next-layer-button text-center'>
+      <button class="btn btn-info" {{action "show11"}}>Next Layer</button>
+    </div>
+  </div>
+  {{/if}}
+{{/if}}
 
 <div id='arrow-layer-11' class='hidden'>
   <div class='autothought col-sm-4'>

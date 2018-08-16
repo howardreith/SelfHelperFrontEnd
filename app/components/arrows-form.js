@@ -92,28 +92,68 @@ export default Component.extend({
       }
     },
     show3 () {
-      this.toggleProperty('3isShowing')
+      if (!this.get('arrowsEntry.autothought2')) {
+        this.get('flashMessages')
+        .danger('Please input automatic thought.')
+      } else {
+        this.toggleProperty('3isShowing')
+      }
     },
     show4 () {
-      document.getElementById('arrow-layer-4').setAttribute('class', '')
+      if (!this.get('arrowsEntry.autothought3')) {
+        this.get('flashMessages')
+        .danger('Please input automatic thought.')
+      } else {
+        this.toggleProperty('4isShowing')
+      }
     },
     show5 () {
-      document.getElementById('arrow-layer-5').setAttribute('class', '')
+      if (!this.get('arrowsEntry.autothought4')) {
+        this.get('flashMessages')
+        .danger('Please input automatic thought.')
+      } else {
+        this.toggleProperty('5isShowing')
+      }
     },
     show6 () {
-      document.getElementById('arrow-layer-6').setAttribute('class', '')
+      if (!this.get('arrowsEntry.autothought5')) {
+        this.get('flashMessages')
+        .danger('Please input automatic thought.')
+      } else {
+        this.toggleProperty('6isShowing')
+      }
     },
     show7 () {
-      document.getElementById('arrow-layer-7').setAttribute('class', '')
+      if (!this.get('arrowsEntry.autothought6')) {
+        this.get('flashMessages')
+        .danger('Please input automatic thought.')
+      } else {
+        this.toggleProperty('7isShowing')
+      }
     },
     show8 () {
-      document.getElementById('arrow-layer-8').setAttribute('class', '')
+      if (!this.get('arrowsEntry.autothought7')) {
+        this.get('flashMessages')
+        .danger('Please input automatic thought.')
+      } else {
+        this.toggleProperty('8isShowing')
+      }
     },
     show9 () {
-      document.getElementById('arrow-layer-9').setAttribute('class', '')
+      if (!this.get('arrowsEntry.autothought8')) {
+        this.get('flashMessages')
+        .danger('Please input automatic thought.')
+      } else {
+        this.toggleProperty('9isShowing')
+      }
     },
     show10 () {
-      document.getElementById('arrow-layer-10').setAttribute('class', '')
+      if (!this.get('arrowsEntry.autothought9')) {
+        this.get('flashMessages')
+        .danger('Please input automatic thought.')
+      } else {
+        this.toggleProperty('10isShowing')
+      }
     },
     show11 () {
       document.getElementById('arrow-layer-11').setAttribute('class', '')
