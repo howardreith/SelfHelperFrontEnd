@@ -1,0 +1,32 @@
+<div id="generic-exposures-list" class='generic-exposures-list-container'>
+  <div class='exposures-list-heading'>
+    <h3>Generic Exposures</h3>
+  </div>
+  <table id='generic-exposures-table' class='table table-striped'>
+    <thead>
+      <tr>
+        {{!-- <th id='starred-heading'>Starred</th> --}}
+        <th id='exposures-id-heading' {{action 'sortTable'}}>ID</th>
+        <th id='generic-activity-heading'>Activity</th>
+        <th id='generic-fear-heading'>Fear Level</th>
+        <th id='generic-delete-heading'>Delete</th>
+        <span class="table-add glyphicon glyphicon-plus" {{action 'createGenericsEntry'}}></span>
+      </tr>
+    </thead>
+    <tbody id='generic-exposures-table-body'>
+    {{#each genericsEntries as |generic|}}
+      <tr class="file-row" data-id="{{generic.id}}">
+      {{!-- <td>{{journalEntry.starred}}</td> --}}
+      <td>{{generic.id}}</td>
+      <td>{{input value=generic.activity}}</td>
+      <td>{{input value=generic.fear_level}}</td>
+      {{!-- <td><button class='btn-info' {{action "updateEntry"}}>Update</button></td> --}}
+      <td><button class='btn-danger'{{action "deleteEntry"}}>Delete</button></td>
+      </tr>
+    {{/each}}
+  </tbody>
+  </table>
+  <div id='save-generics-button-wrapper' class='text-center'>
+    <button class='btn btn-info' {{action 'submit'}}>Save Table</button>
+  </div>
+</div>
