@@ -10,13 +10,16 @@ export default Component.extend({
   actions: {
     submit () {
       const table = document.getElementById('generic-exposures-table')
-      for (let i = 0, row; row = table.rows[i]; i++) {
+      for (let i = 1, row; row = table.rows[i]; i++) {
         const rowId = row.getAttribute('data-id')
         console.log('row is ', row)
         console.log('row id is ', rowId)
         this.entry.id = rowId
-        this.entry.activity = this.get('generic.activity')
-        this.entry.fear_level = this.get('generic.fear_level')
+        console.log('genericsEntries is ', this.get('genericsEntries'))
+        console.log('genericsEntries[i] is ', this.genericsEntries[i - 1])
+        console.log('genericsEntries[i].activity is ', this.genericsEntries[i - 1].activity)
+        this.entry.activity = this.genericsEntries[i - 1].activity
+        this.entry.fear_level = this.genericsEntries[i - 1].fear_level
         console.log('entry is ', this.entry)
         this.sendAction('submit', this.get('entry'))
       }

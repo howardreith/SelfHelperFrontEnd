@@ -48,7 +48,19 @@ export default Route.extend({
     },
     updateGenericsTable (entry) {
       console.log('updateGenericsTable was accessed in generic.js.')
-      console.log('entry in updateGEnericsTable is ', entry)
+      console.log('entry in updateGenericsTable is ', entry)
+      this.get('generics').updateGenericsEntry(entry)
+      .then(() => {
+        this.refresh()
+      })
+      .then(() => {
+        this.get('flashMessages')
+          .success('Successfully updated a generics entry.')
+      })
+      .catch(() => {
+        this.get('flashMessages')
+          .danger('There was a problem. Please try again.')
+      })
     },
     sortTable () {
       // console.log('sort table was activated')
