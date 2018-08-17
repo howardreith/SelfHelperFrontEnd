@@ -1,0 +1,16 @@
+{{input type='hidden' value=exposuresEntry.id}}
+<h5>Last updated {{exposuresEntry.updated_at}}</h5>
+<h4>Action</h4>{{input value=exposuresEntry.action}}
+<h4>Predicted Fear</h4>{{input value=exposuresEntry.prediction}}
+<h4>Actual Fear</h4>{{input value=exposuresEntry.actual}}
+<h4>Satisfaction</h4>{{input value=exposuresEntry.satisfaction}}
+
+<div id='update-exposure-button'>
+  <button type="submit" tabIndex='1' class="btn btn-primary" {{action "submit"}}>
+  Update Exposure
+  </button>
+
+  <button class="btn btn-default" {{action "cancel"}}>
+  Cancel
+  </button>
+</div>

@@ -10,18 +10,23 @@ Router.map(function () {
   this.route('sign-up')
   this.route('sign-in')
   this.route('change-password')
-  this.route('journal', function() {
-    this.route('view');
-    this.route('show', {path: '/:journal_id'});
+  this.route('journal', function () {
+    this.route('view')
+    this.route('show', {path: '/:journal_id'})
   })
-  this.route('columns', function() {
-    this.route('view');
-    this.route('show', {path: '/:column_id'});
-  });
-  this.route('arrows', function() {
-    this.route('view');
-    this.route('show', {path: '/:arrow_id'});
-  });
+  this.route('columns', function () {
+    this.route('view')
+    this.route('show', {path: '/:column_id'})
+  })
+  this.route('arrows', function () {
+    this.route('view')
+    this.route('show', {path: '/:arrow_id'})
+  })
+  this.route('exposures', function () {
+    this.route('view')
+    this.route('show', {path: '/:exposure_id'})
+    this.route('generic')
+  })
 })
 
 export default Router
