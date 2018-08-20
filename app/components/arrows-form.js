@@ -94,7 +94,7 @@ export default Component.extend({
     show3 () {
       if (!this.get('arrowsEntry.autothought2')) {
         this.get('flashMessages')
-        .danger('Please input automatic thought.')
+        .danger('Please input meaning.')
       } else {
         this.toggleProperty('3isShowing')
       }
@@ -102,7 +102,7 @@ export default Component.extend({
     show4 () {
       if (!this.get('arrowsEntry.autothought3')) {
         this.get('flashMessages')
-        .danger('Please input automatic thought.')
+        .danger('Please input meaning.')
       } else {
         this.toggleProperty('4isShowing')
       }
@@ -110,7 +110,7 @@ export default Component.extend({
     show5 () {
       if (!this.get('arrowsEntry.autothought4')) {
         this.get('flashMessages')
-        .danger('Please input automatic thought.')
+        .danger('Please input meaning.')
       } else {
         this.toggleProperty('5isShowing')
       }
@@ -118,7 +118,7 @@ export default Component.extend({
     show6 () {
       if (!this.get('arrowsEntry.autothought5')) {
         this.get('flashMessages')
-        .danger('Please input automatic thought.')
+        .danger('Please input meaning.')
       } else {
         this.toggleProperty('6isShowing')
       }
@@ -126,7 +126,7 @@ export default Component.extend({
     show7 () {
       if (!this.get('arrowsEntry.autothought6')) {
         this.get('flashMessages')
-        .danger('Please input automatic thought.')
+        .danger('Please input meaning.')
       } else {
         this.toggleProperty('7isShowing')
       }
@@ -134,7 +134,7 @@ export default Component.extend({
     show8 () {
       if (!this.get('arrowsEntry.autothought7')) {
         this.get('flashMessages')
-        .danger('Please input automatic thought.')
+        .danger('Please input meaning.')
       } else {
         this.toggleProperty('8isShowing')
       }
@@ -142,7 +142,7 @@ export default Component.extend({
     show9 () {
       if (!this.get('arrowsEntry.autothought8')) {
         this.get('flashMessages')
-        .danger('Please input automatic thought.')
+        .danger('Please input meaning.')
       } else {
         this.toggleProperty('9isShowing')
       }
@@ -150,40 +150,90 @@ export default Component.extend({
     show10 () {
       if (!this.get('arrowsEntry.autothought9')) {
         this.get('flashMessages')
-        .danger('Please input automatic thought.')
+        .danger('Please input meaning.')
       } else {
         this.toggleProperty('10isShowing')
       }
     },
     show11 () {
-      document.getElementById('arrow-layer-11').setAttribute('class', '')
+      if (!this.get('arrowsEntry.autothought10')) {
+        this.get('flashMessages')
+        .danger('Please input meaning.')
+      } else {
+        this.toggleProperty('11isShowing')
+      }
     },
     show12 () {
-      document.getElementById('arrow-layer-12').setAttribute('class', '')
+      if (!this.get('arrowsEntry.autothought11')) {
+        this.get('flashMessages')
+        .danger('Please input meaning.')
+      } else {
+        this.toggleProperty('12isShowing')
+      }
     },
     show13 () {
-      document.getElementById('arrow-layer-13').setAttribute('class', '')
+      if (!this.get('arrowsEntry.autothought12')) {
+        this.get('flashMessages')
+        .danger('Please input meaning.')
+      } else {
+        this.toggleProperty('13isShowing')
+      }
     },
     show14 () {
-      document.getElementById('arrow-layer-14').setAttribute('class', '')
+      if (!this.get('arrowsEntry.autothought13')) {
+        this.get('flashMessages')
+        .danger('Please input meaning.')
+      } else {
+        this.toggleProperty('14isShowing')
+      }
     },
     show15 () {
-      document.getElementById('arrow-layer-15').setAttribute('class', '')
+      if (!this.get('arrowsEntry.autothought14')) {
+        this.get('flashMessages')
+        .danger('Please input meaning.')
+      } else {
+        this.toggleProperty('15isShowing')
+      }
     },
     show16 () {
-      document.getElementById('arrow-layer-16').setAttribute('class', '')
+      if (!this.get('arrowsEntry.autothought15')) {
+        this.get('flashMessages')
+        .danger('Please input meaning.')
+      } else {
+        this.toggleProperty('16isShowing')
+      }
     },
     show17 () {
-      document.getElementById('arrow-layer-17').setAttribute('class', '')
+      if (!this.get('arrowsEntry.autothought16')) {
+        this.get('flashMessages')
+        .danger('Please input meaning.')
+      } else {
+        this.toggleProperty('17isShowing')
+      }
     },
     show18 () {
-      document.getElementById('arrow-layer-18').setAttribute('class', '')
+      if (!this.get('arrowsEntry.autothought17')) {
+        this.get('flashMessages')
+        .danger('Please input meaning.')
+      } else {
+        this.toggleProperty('18isShowing')
+      }
     },
     show19 () {
-      document.getElementById('arrow-layer-19').setAttribute('class', '')
+      if (!this.get('arrowsEntry.autothought18')) {
+        this.get('flashMessages')
+        .danger('Please input meaning.')
+      } else {
+        this.toggleProperty('19isShowing')
+      }
     },
     show20 () {
-      document.getElementById('arrow-layer-20').setAttribute('class', '')
+      if (!this.get('arrowsEntry.autothought19')) {
+        this.get('flashMessages')
+        .danger('Please input meaning.')
+      } else {
+        this.toggleProperty('20isShowing')
+      }
     }
   }
 })
