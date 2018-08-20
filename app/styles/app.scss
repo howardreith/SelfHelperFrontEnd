@@ -106,6 +106,16 @@
   margin-right: 3px;
 }
 
+#update-exposure-button {
+  text-align: center;
+  margin-top: 10px;
+}
+
+#update-arrow-button {
+  text-align: center;
+  margin-top: 10px;
+}
+
 .btn:focus ~ .distortions {
   display: block;
 }
