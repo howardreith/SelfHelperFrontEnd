@@ -30,6 +30,15 @@ export default Component.extend({
     deleteEntry () {
       const clickedRow = event.target.parentNode.parentNode.getElementsByTagName('td')[0].innerText
       this.sendAction('deleteEntry', clickedRow)
+    },
+    sortTableById () {
+      this.sendAction('sortTableById')
+    },
+    sortTableByActivity () {
+      this.sendAction('sortTableByActivity')
+    },
+    sortTableByFearLevel () {
+      this.sendAction('sortTableByFearLevel')
     }
   }
 })

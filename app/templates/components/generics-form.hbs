@@ -6,9 +6,9 @@
     <thead>
       <tr>
         {{!-- <th id='starred-heading'>Starred</th> --}}
-        <th id='exposures-id-heading' {{action 'sortTable'}}>ID</th>
-        <th id='generic-activity-heading'>Activity</th>
-        <th id='generic-fear-heading'>Fear Level</th>
+        <th id='exposures-id-heading' {{action 'sortTableById'}}>ID</th>
+        <th id='generic-activity-heading' {{action 'sortTableByActivity'}}>Activity</th>
+        <th id='generic-fear-heading' {{action 'sortTableByFearLevel'}}>Fear Level</th>
         <th id='generic-delete-heading'>Delete</th>
         <span class="table-add glyphicon glyphicon-plus" {{action 'createGenericsEntry'}}></span>
       </tr>
