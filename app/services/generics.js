@@ -31,7 +31,7 @@ export default Service.extend({
 
   updateGenericsEntry (entry) {
   // console.log('updateColumnEntry was run in the service')
-    console.log('entry in the updateGenericsEntry service is ', entry)
+    // console.log('entry in the updateGenericsEntry service is ', entry)
     return this.get('ajax').patch('/generics/' + entry.id, {
       data: {
         generic: {

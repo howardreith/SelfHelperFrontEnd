@@ -11,47 +11,47 @@ export default Service.extend({
   // a boolean, true if credentials.token exists
   isAuthenticated: bool('credentials.token'),
 
-createJournalEntry (entry) {
+  createJournalEntry (entry) {
   // console.log('entry in the final stage is ', entry)
-  return this.get('ajax').post('/journal_entries', {
-    data: {
-      journal_entry: {
-        title: '',
-        content: ''
+    return this.get('ajax').post('/journal_entries', {
+      data: {
+        journal_entry: {
+          title: '',
+          content: ''
+        }
       }
-    }
-  })
-},
+    })
+  },
 
-getJournalEntries () {
+  getJournalEntries () {
   // console.log('getJournalEntries was run!')
-  const journalEntries = this.get('ajax').request('/journal_entries')
+    const journalEntries = this.get('ajax').request('/journal_entries')
   // console.log(journalEntries)
-  return journalEntries
-},
+    return journalEntries
+  },
 
-getJournalEntry (id) {
+  getJournalEntry (id) {
   // console.log('getJournalEntry was run!')
-  const journalEntry = this.get('ajax').request('/journal_entries/' + id)
+    const journalEntry = this.get('ajax').request('/journal_entries/' + id)
   // console.log('journalEntry is ', journalEntry)
-  return journalEntry
-},
+    return journalEntry
+  },
 
-updateJournalEntry (entry) {
+  updateJournalEntry (entry) {
   // console.log('updateJournalEntry was run in the service')
   // console.log('entry in the updateJournalEntry service is ', entry)
-  return this.get('ajax').patch('/journal_entries/' + entry.id, {
-    data: {
-      journal_entry: {
-        title: entry.title,
-        content: entry.content
+    return this.get('ajax').patch('/journal_entries/' + entry.id, {
+      data: {
+        journal_entry: {
+          title: entry.title,
+          content: entry.content
+        }
       }
-    }
-  })
-},
-deleteJournalEntry (id) {
+    })
+  },
+  deleteJournalEntry (id) {
   // console.log('deleteJournalEntry was run in the service.')
   // console.log('id in the deleteJournalEntry service is ', id)
-  return this.get('ajax').del('/journal_entries/' + id)
-}
+    return this.get('ajax').del('/journal_entries/' + id)
+  }
 })

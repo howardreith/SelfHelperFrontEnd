@@ -11,53 +11,53 @@ export default Service.extend({
   // a boolean, true if credentials.token exists
   isAuthenticated: bool('credentials.token'),
 
-createColumnsEntry () {
+  createColumnsEntry () {
   // console.log('createColumnsEntry was called in the final stage')
-  return this.get('ajax').post('/colum_methods', {
-    data: {
-      colum_method: {
-        event: '',
-        emotion: '',
-        autothought: '',
-        distortion: '',
-        response: ''
+    return this.get('ajax').post('/colum_methods', {
+      data: {
+        colum_method: {
+          event: '',
+          emotion: '',
+          autothought: '',
+          distortion: '',
+          response: ''
+        }
       }
-    }
-  })
-},
+    })
+  },
 
-getColumnsEntries () {
+  getColumnsEntries () {
   // console.log('getColumnMethods was run!')
-  const columnEntries = this.get('ajax').request('/colum_methods')
+    const columnEntries = this.get('ajax').request('/colum_methods')
   // console.log(columnEntries)
-  return columnEntries
-},
+    return columnEntries
+  },
 
-getColumnsEntry (id) {
+  getColumnsEntry (id) {
   // console.log('getColumnsEntry was run!')
-  const columnEntry = this.get('ajax').request('/colum_methods/' + id)
+    const columnEntry = this.get('ajax').request('/colum_methods/' + id)
   // console.log('columnEntry is ', columnEntry)
-  return columnEntry
-},
+    return columnEntry
+  },
 
-updateColumnsEntry (entry) {
+  updateColumnsEntry (entry) {
   // console.log('updateColumnEntry was run in the service')
   // console.log('entry in the updateColumnEntry service is ', entry)
-  return this.get('ajax').patch('/colum_methods/' + entry.id, {
-    data: {
-      colum_method: {
-        event: entry.event,
-        emotion: entry.emotion,
-        autothought: entry.autothought,
-        distortion: entry.distortion,
-        response: entry.response
+    return this.get('ajax').patch('/colum_methods/' + entry.id, {
+      data: {
+        colum_method: {
+          event: entry.event,
+          emotion: entry.emotion,
+          autothought: entry.autothought,
+          distortion: entry.distortion,
+          response: entry.response
+        }
       }
-    }
-  })
-},
-deleteColumnsEntry (id) {
+    })
+  },
+  deleteColumnsEntry (id) {
   // console.log('deleteColumnEntry was run in the service.')
   // console.log('id in the deleteColumnEntry service is ', id)
-  return this.get('ajax').del('/colum_methods/' + id)
-}
+    return this.get('ajax').del('/colum_methods/' + id)
+  }
 })

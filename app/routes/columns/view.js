@@ -1,4 +1,4 @@
-import Route from '@ember/routing/route';
+import Route from '@ember/routing/route'
 import { inject as service } from '@ember/service'
 
 export default Route.extend({
@@ -22,10 +22,10 @@ export default Route.extend({
   },
 
   actions: {
-    goToColumns() {
+    goToColumns () {
       this.transitionTo('columns')
     },
-    updateEntry() {
+    updateEntry () {
       // console.log('updateEntry was activated.')
       // console.log('this is ', this)
       // console.log('this.context is ', this.context)
@@ -33,7 +33,7 @@ export default Route.extend({
       // console.log('clickedRow is ', clickedRow)
       this.transitionTo('/columns/' + clickedRow)
     },
-    deleteEntry() {
+    deleteEntry () {
       // console.log('deleteEntry was activated.')
       const clickedRow = event.target.parentNode.parentNode.getElementsByTagName('td')[0].innerText
       // console.log('clickedRow is ', clickedRow)
@@ -69,16 +69,16 @@ export default Route.extend({
           //     break
           //   }
           // } else {
-        if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
-          shouldSwitch = true
-          break
+          if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+            shouldSwitch = true
+            break
+          }
         }
-      }
-      if (shouldSwitch) {
-        rows[i].parentNode.insertBefore(rows[i + 1], rows[i])
-        switching = true
+        if (shouldSwitch) {
+          rows[i].parentNode.insertBefore(rows[i + 1], rows[i])
+          switching = true
+        }
       }
     }
   }
-}
 })

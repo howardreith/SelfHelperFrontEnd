@@ -38,7 +38,7 @@ export default Service.extend({
 
   updateExposuresEntry (entry) {
   // console.log('updateColumnEntry was run in the service')
-    console.log('entry in the updateColumnEntry service is ', entry)
+    // console.log('entry in the updateColumnEntry service is ', entry)
     return this.get('ajax').patch('/exposures/' + entry.id, {
       data: {
         exposure: {

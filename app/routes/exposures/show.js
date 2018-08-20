@@ -7,7 +7,7 @@ export default Route.extend({
 
   actions: {
     updateExposuresEntry (entry) {
-      console.log('entry in show.js is ', entry)
+      // console.log('entry in show.js is ', entry)
       this.get('exposures').updateExposuresEntry(entry)
       .then(() => this.refresh())
       .then(() => {

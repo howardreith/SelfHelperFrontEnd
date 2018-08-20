@@ -40,8 +40,8 @@ export default Service.extend({
 
   updateArrowsEntry (entry) {
   // console.log('updateColumnEntry was run in the service')
-    console.log('entry in the updateColumnEntry service is ', entry)
-    console.log('entry.autothought2 is ', entry.autothought2)
+    // console.log('entry in the updateColumnEntry service is ', entry)
+    // console.log('entry.autothought2 is ', entry.autothought2)
     return this.get('ajax').patch('/downward_arrows/' + entry.id, {
       data: {
         downward_arrow: {

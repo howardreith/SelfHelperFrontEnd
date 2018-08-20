@@ -9,13 +9,13 @@ export default Component.extend({
 
   actions: {
     submit () {
-      console.log('id in arrows-form is ', this.get('arrowsEntry.id'))
-      console.log('autothought1 in arrows-form is ', this.get('arrowsEntry.autothought1'))
-      console.log('distortion1 in arrows-form is ', this.get('arrowsEntry.distortion1'))
-      console.log('response1 in arrows-form is ', this.get('arrowsEntry.response1'))
-      console.log('autothought2 in arrows-form is ', this.get('arrowsEntry.autothought2'))
-      console.log('distortion2 in arrows-form is ', this.get('arrowsEntry.distortion2'))
-      console.log('response2 in arrows-form is ', this.get('arrowsEntry.response2'))
+      // console.log('id in arrows-form is ', this.get('arrowsEntry.id'))
+      // console.log('autothought1 in arrows-form is ', this.get('arrowsEntry.autothought1'))
+      // console.log('distortion1 in arrows-form is ', this.get('arrowsEntry.distortion1'))
+      // console.log('response1 in arrows-form is ', this.get('arrowsEntry.response1'))
+      // console.log('autothought2 in arrows-form is ', this.get('arrowsEntry.autothought2'))
+      // console.log('distortion2 in arrows-form is ', this.get('arrowsEntry.distortion2'))
+      // console.log('response2 in arrows-form is ', this.get('arrowsEntry.response2'))
       this.entry.id = this.get('arrowsEntry.id')
       this.entry.autothought1 = this.get('arrowsEntry.autothought1')
       this.entry.distortion1 = this.get('arrowsEntry.distortion1')
@@ -77,7 +77,7 @@ export default Component.extend({
       this.entry.autothought20 = this.get('arrowsEntry.autothought20')
       this.entry.distortion20 = this.get('arrowsEntry.distortion20')
       this.entry.response20 = this.get('arrowsEntry.response20')
-      console.log('entry is ', this.get('entry'))
+      // console.log('entry is ', this.get('entry'))
       this.sendAction('submit', this.get('entry'))
     },
     cancel () {
