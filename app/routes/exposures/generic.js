@@ -124,7 +124,7 @@ export default Route.extend({
           // console.log('x is ', x)
           // console.log('y is ', y)
           // console.log('x.children[0].value is ', x.children[0].value)
-          if (x.children[0].value > y.children[0].value) {
+          if (+x.children[0].value > +y.children[0].value) {
             shouldSwitch = true
             break
           }
