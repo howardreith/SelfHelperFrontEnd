@@ -69,7 +69,7 @@ export default Route.extend({
           shouldSwitch = false
           x = rows[i].getElementsByTagName('TD')[0]
           y = rows[i + 1].getElementsByTagName('TD')[0]
-          if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+          if (+x.innerHTML < +y.innerHTML) {
             shouldSwitch = true
             break
           }
