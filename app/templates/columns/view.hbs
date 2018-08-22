@@ -8,13 +8,13 @@
     <thead>
       <tr>
         {{!-- <th id='starred-heading'>Starred</th> --}}
-        <th id='columns-id-heading' {{action 'sortTable'}}>ID</th>
-        <th id='columns-date-created-heading'>Date Created</th>
-        <th id='columns-event-heading'>Event</th>
-        <th id='columns-emotion-heading'>Emotion</th>
-        <th id='columns-autothought-heading'>Automatic Thought</th>
-        <th id='columns-distortion-heading'>Distortion</th>
-        <th id='columns-response-heading'>Response</th>
+        <th id='columns-id-heading' {{action 'sortTableById'}}>ID</th>
+        <th id='columns-date-created-heading' {{action 'sortTableByDate'}}>Date Created</th>
+        <th id='columns-event-heading' {{action 'sortTableByEvent'}}>Event</th>
+        <th id='columns-emotion-heading' {{action 'sortTableByEmotion'}}>Emotion</th>
+        <th id='columns-autothought-heading' {{action 'sortTableByAutothought'}}>Automatic Thought</th>
+        <th id='columns-distortion-heading' {{action 'sortTableByDistortion'}}>Distortion</th>
+        <th id='columns-response-heading' {{action 'sortTableByResponse'}}>Response</th>
         <th id='columns-update-heading'>Update</th>
         <th id='columns-delete-heading'>Delete</th>
       </tr>

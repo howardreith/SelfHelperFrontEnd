@@ -1,4 +1,4 @@
-import Route from '@ember/routing/route';
+import Route from '@ember/routing/route'
 import { inject as service } from '@ember/service'
 
 export default Route.extend({
@@ -21,10 +21,10 @@ export default Route.extend({
   },
 
   actions: {
-    goToJournal() {
+    goToJournal () {
       this.transitionTo('journal')
     },
-    updateEntry() {
+    updateEntry () {
       // console.log('updateEntry was activated.')
       // console.log('this is ', this)
       // console.log('this.context is ', this.context)
@@ -32,7 +32,7 @@ export default Route.extend({
       // console.log('clickedRow is ', clickedRow)
       this.transitionTo('/journal/' + clickedRow)
     },
-    deleteEntry() {
+    deleteEntry () {
       // console.log('deleteEntry was activated.')
       const clickedRow = event.target.parentNode.parentNode.getElementsByTagName('td')[0].innerText
       // console.log('clickedRow is ', clickedRow)
@@ -47,8 +47,60 @@ export default Route.extend({
         .danger('There was a problem. Please try again.')
       })
     },
-    sortTable () {
-      // console.log('sort table was activated')
+    sortTableById () {
+      // console.log('sort table by ID was activated')
+      let rows, i, x, y, shouldSwitch
+      const table = document.getElementById('journal-table')
+      let switching = true
+      while (switching) {
+        switching = false
+        rows = table.getElementsByTagName('TR')
+        // console.log('rows is ', rows)
+        // console.log('rows.length is ', rows.length)
+        for (i = 1; i < (rows.length - 1); i++) {
+          // console.log('this ran ', i, ' times')
+          shouldSwitch = false
+          x = rows[i].getElementsByTagName('TD')[0]
+          y = rows[i + 1].getElementsByTagName('TD')[0]
+          if (+x.innerHTML < +y.innerHTML) {
+            shouldSwitch = true
+            break
+          }
+        }
+        if (shouldSwitch) {
+          rows[i].parentNode.insertBefore(rows[i + 1], rows[i])
+          switching = true
+        }
+      }
+    },
+    sortTableByDate () {
+      // console.log('sort table by ID was activated')
+      let rows, i, x, y, shouldSwitch
+      const table = document.getElementById('journal-table')
+      let switching = true
+      while (switching) {
+        switching = false
+        rows = table.getElementsByTagName('TR')
+        // console.log('rows is ', rows)
+        // console.log('rows.length is ', rows.length)
+        for (i = 1; i < (rows.length - 1); i++) {
+          // console.log('this ran ', i, ' times')
+          shouldSwitch = false
+          x = rows[i].getElementsByTagName('TD')[1]
+          y = rows[i + 1].getElementsByTagName('TD')[1]
+          if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+            shouldSwitch = true
+            break
+          }
+        }
+        if (shouldSwitch) {
+          rows[i].parentNode.insertBefore(rows[i + 1], rows[i])
+          switching = true
+        }
+      }
+    },
+    sortTableByTitle () {
+      // console.log('sort table by activity was activated')
       let rows, i, x, y, shouldSwitch
       const table = document.getElementById('journal-table')
       let switching = true
@@ -62,22 +114,16 @@ export default Route.extend({
           shouldSwitch = false
           x = rows[i].getElementsByTagName('TD')[2]
           y = rows[i + 1].getElementsByTagName('TD')[2]
-          // if (heading === 0 || heading === 3) {
-          //   if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
-          //     shouldSwitch = true
-          //     break
-          //   }
-          // } else {
-        if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
-          shouldSwitch = true
-          break
+          if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+            shouldSwitch = true
+            break
+          }
         }
-      }
-      if (shouldSwitch) {
-        rows[i].parentNode.insertBefore(rows[i + 1], rows[i])
-        switching = true
+        if (shouldSwitch) {
+          rows[i].parentNode.insertBefore(rows[i + 1], rows[i])
+          switching = true
+        }
       }
     }
   }
-}
 })

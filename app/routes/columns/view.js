@@ -48,8 +48,34 @@ export default Route.extend({
         .danger('There was a problem. Please try again.')
       })
     },
-    sortTable () {
-      // console.log('sort table was activated')
+    sortTableById () {
+      // console.log('sort table by ID was activated')
+      let rows, i, x, y, shouldSwitch
+      const table = document.getElementById('columns-table')
+      let switching = true
+      while (switching) {
+        switching = false
+        rows = table.getElementsByTagName('TR')
+        // console.log('rows is ', rows)
+        // console.log('rows.length is ', rows.length)
+        for (i = 1; i < (rows.length - 1); i++) {
+          // console.log('this ran ', i, ' times')
+          shouldSwitch = false
+          x = rows[i].getElementsByTagName('TD')[0]
+          y = rows[i + 1].getElementsByTagName('TD')[0]
+          if (+x.innerHTML < +y.innerHTML) {
+            shouldSwitch = true
+            break
+          }
+        }
+        if (shouldSwitch) {
+          rows[i].parentNode.insertBefore(rows[i + 1], rows[i])
+          switching = true
+        }
+      }
+    },
+    sortTableByDate () {
+      // console.log('sort table by ID was activated')
       let rows, i, x, y, shouldSwitch
       const table = document.getElementById('columns-table')
       let switching = true
@@ -63,13 +89,137 @@ export default Route.extend({
           shouldSwitch = false
           x = rows[i].getElementsByTagName('TD')[1]
           y = rows[i + 1].getElementsByTagName('TD')[1]
-          // if (heading === 0 || heading === 3) {
-          //   if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
-          //     shouldSwitch = true
-          //     break
-          //   }
-          // } else {
           if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+            shouldSwitch = true
+            break
+          }
+        }
+        if (shouldSwitch) {
+          rows[i].parentNode.insertBefore(rows[i + 1], rows[i])
+          switching = true
+        }
+      }
+    },
+    sortTableByEvent () {
+      // console.log('sort table by activity was activated')
+      let rows, i, x, y, shouldSwitch
+      const table = document.getElementById('columns-table')
+      let switching = true
+      while (switching) {
+        switching = false
+        rows = table.getElementsByTagName('TR')
+        // console.log('rows is ', rows)
+        // console.log('rows.length is ', rows.length)
+        for (i = 1; i < (rows.length - 1); i++) {
+          // console.log('this ran ', i, ' times')
+          shouldSwitch = false
+          x = rows[i].getElementsByTagName('TD')[2]
+          y = rows[i + 1].getElementsByTagName('TD')[2]
+          if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+            shouldSwitch = true
+            break
+          }
+        }
+        if (shouldSwitch) {
+          rows[i].parentNode.insertBefore(rows[i + 1], rows[i])
+          switching = true
+        }
+      }
+    },
+    sortTableByEmotion () {
+      // console.log('sort table by activity was activated')
+      let rows, i, x, y, shouldSwitch
+      const table = document.getElementById('columns-table')
+      let switching = true
+      while (switching) {
+        switching = false
+        rows = table.getElementsByTagName('TR')
+        // console.log('rows is ', rows)
+        // console.log('rows.length is ', rows.length)
+        for (i = 1; i < (rows.length - 1); i++) {
+          // console.log('this ran ', i, ' times')
+          shouldSwitch = false
+          x = rows[i].getElementsByTagName('TD')[3]
+          y = rows[i + 1].getElementsByTagName('TD')[3]
+          if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+            shouldSwitch = true
+            break
+          }
+        }
+        if (shouldSwitch) {
+          rows[i].parentNode.insertBefore(rows[i + 1], rows[i])
+          switching = true
+        }
+      }
+    },
+    sortTableByAutothought () {
+      // console.log('sort table by activity was activated')
+      let rows, i, x, y, shouldSwitch
+      const table = document.getElementById('columns-table')
+      let switching = true
+      while (switching) {
+        switching = false
+        rows = table.getElementsByTagName('TR')
+        // console.log('rows is ', rows)
+        // console.log('rows.length is ', rows.length)
+        for (i = 1; i < (rows.length - 1); i++) {
+          // console.log('this ran ', i, ' times')
+          shouldSwitch = false
+          x = rows[i].getElementsByTagName('TD')[4]
+          y = rows[i + 1].getElementsByTagName('TD')[4]
+          if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+            shouldSwitch = true
+            break
+          }
+        }
+        if (shouldSwitch) {
+          rows[i].parentNode.insertBefore(rows[i + 1], rows[i])
+          switching = true
+        }
+      }
+    },
+    sortTableByDistortion () {
+      // console.log('sort table by activity was activated')
+      let rows, i, x, y, shouldSwitch
+      const table = document.getElementById('columns-table')
+      let switching = true
+      while (switching) {
+        switching = false
+        rows = table.getElementsByTagName('TR')
+        // console.log('rows is ', rows)
+        // console.log('rows.length is ', rows.length)
+        for (i = 1; i < (rows.length - 1); i++) {
+          // console.log('this ran ', i, ' times')
+          shouldSwitch = false
+          x = rows[i].getElementsByTagName('TD')[5]
+          y = rows[i + 1].getElementsByTagName('TD')[5]
+          if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+            shouldSwitch = true
+            break
+          }
+        }
+        if (shouldSwitch) {
+          rows[i].parentNode.insertBefore(rows[i + 1], rows[i])
+          switching = true
+        }
+      }
+    },
+    sortTableByResponse () {
+      // console.log('sort table by activity was activated')
+      let rows, i, x, y, shouldSwitch
+      const table = document.getElementById('columns-table')
+      let switching = true
+      while (switching) {
+        switching = false
+        rows = table.getElementsByTagName('TR')
+        // console.log('rows is ', rows)
+        // console.log('rows.length is ', rows.length)
+        for (i = 1; i < (rows.length - 1); i++) {
+          // console.log('this ran ', i, ' times')
+          shouldSwitch = false
+          x = rows[i].getElementsByTagName('TD')[6]
+          y = rows[i + 1].getElementsByTagName('TD')[6]
+          if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
             shouldSwitch = true
             break
           }
