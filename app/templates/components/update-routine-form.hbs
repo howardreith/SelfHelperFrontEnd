@@ -12,6 +12,7 @@
   </div>
 </div>
 
+{{#if (or routinesEntry.exercise2 routinesEntry.reps2 routinesEntry.sets2 2isShowing)}}
 <div id='exercise 2' class='text-center'>
   <div class='exercise col-sm-6'>
     {{input value=routinesEntry.exercise2}}
@@ -23,9 +24,24 @@
     {{input value=routinesEntry.sets2}}
   </div>
 </div>
+{{/if}}
+
+{{#if (or routinesEntry.exercise3 routinesEntry.reps3 routinesEntry.sets3 3isShowing)}}
+<div id='exercise 3' class='text-center'>
+  <div class='exercise col-sm-6'>
+    {{input value=routinesEntry.exercise3}}
+  </div>
+  <div class='reps col-sm-3'>
+    {{input value=routinesEntry.reps3}}
+  </div>
+  <div class='sets col-sm-3'>
+    {{input value=routinesEntry.sets3}}
+  </div>
+</div>
+{{/if}}
 
 <div class='next-exercise-button text-center'>
-  <button class="btn btn-info" {{action "show2"}}>Add Exercise</button>
+  <button class="btn btn-info" {{action "showNext"}}>Add Exercise</button>
 </div>
 
 <div id='update-routine-button' class='text-center'>

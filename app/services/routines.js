@@ -49,7 +49,10 @@ export default Service.extend({
           reps1: entry.reps1,
           exercise2: entry.exercise2,
           sets2: entry.sets2,
-          reps2: entry.reps2
+          reps2: entry.reps2,
+          exercise3: entry.exercise3,
+          sets3: entry.sets3,
+          reps3: entry.reps3
         }
       }
     })
