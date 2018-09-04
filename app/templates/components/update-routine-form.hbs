@@ -1,18 +1,31 @@
 {{input type='hidden' value=routinesEntry.id}}
 <h3>Routine Name</h3>{{input value=routinesEntry.name}}
-<div id='Exercise 1' class='text-center'>
-  <div class='exercise col-sm-5'>
+<div id='exercise 1' class='text-center'>
+  <div class='exercise col-sm-6'>
     <h5>Exercise</h5>{{input value=routinesEntry.exercise1}}
   </div>
-  <div class='reps col-sm-2'>
+  <div class='reps col-sm-3'>
     <h5>Reps</h5>{{input value=routinesEntry.reps1}}
   </div>
-  <div class='sets col-sm-2'>
+  <div class='sets col-sm-3'>
     <h5>Sets</h5>{{input value=routinesEntry.sets1}}
   </div>
-  <div class='next-exercise-button col-sm-3'>
-    <button class="btn btn-info" {{action "show2"}}>Next Exercise</button>
+</div>
+
+<div id='exercise 2' class='text-center'>
+  <div class='exercise col-sm-6'>
+    {{input value=routinesEntry.exercise2}}
   </div>
+  <div class='reps col-sm-3'>
+    {{input value=routinesEntry.reps2}}
+  </div>
+  <div class='sets col-sm-3'>
+    {{input value=routinesEntry.sets2}}
+  </div>
+</div>
+
+<div class='next-exercise-button text-center'>
+  <button class="btn btn-info" {{action "show2"}}>Add Exercise</button>
 </div>
 
 <div id='update-routine-button' class='text-center'>

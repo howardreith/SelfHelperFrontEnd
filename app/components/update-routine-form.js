@@ -14,6 +14,11 @@ export default Component.extend({
       this.entry.id = this.get('routinesEntry.id')
       this.entry.name = this.get('routinesEntry.name')
       this.entry.exercise1 = this.get('routinesEntry.exercise1')
+      this.entry.reps1 = this.get('routinesEntry.reps1')
+      this.entry.sets1 = this.get('routinesEntry.sets1')
+      this.entry.exercise2 = this.get('routinesEntry.exercise2')
+      this.entry.reps2 = this.get('routinesEntry.reps2')
+      this.entry.sets2 = this.get('routinesEntry.sets2')
       console.log('entry is ', this.get('entry'))
       this.sendAction('submit', this.get('entry'))
     },

@@ -7,7 +7,7 @@ export default Route.extend({
 
   actions: {
     updateRoutinesEntry (entry) {
-      // console.log('entry in show.js is ', entry)
+      console.log('entry in design.js is ', entry)
       this.get('routines').updateRoutinesEntry(entry)
       .then(() => this.refresh())
       .then(() => {
@@ -20,7 +20,7 @@ export default Route.extend({
       })
     },
     cancel () {
-      this.transitionTo('workouts.routines.view')
+      this.transitionTo('workouts.routines')
     }
   },
 

@@ -44,7 +44,12 @@ export default Service.extend({
         routine: {
           include: entry.include,
           name: entry.name,
-          exercise1: entry.exercise1
+          exercise1: entry.exercise1,
+          sets1: entry.sets1,
+          reps1: entry.reps1,
+          exercise2: entry.exercise2,
+          sets2: entry.sets2,
+          reps2: entry.reps2
         }
       }
     })
