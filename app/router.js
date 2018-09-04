@@ -27,6 +27,13 @@ Router.map(function () {
     this.route('show', {path: '/:exposure_id'})
     this.route('generic')
   })
+  this.route('workouts', function () {
+    this.route('view')
+    this.route('show', {path: '/:workout_id'})
+    this.route('routines', function () {
+      this.route('design', {path: '/:routine_id'})
+    })
+  })
 })
 
 export default Router

@@ -1,0 +1,33 @@
+{{left-nav-workouts}}
+
+<div id="routines-list" class='routines-list-container'>
+  <div class='routine-list-heading'>
+    <h3>Routines</h3>
+  </div>
+  <button type="submit" class="btn btn-primary" {{action "createRoutinesEntry"}}>
+    New Routine
+  </button>
+  <table id='routines-table' class='table table-striped'>
+    <thead>
+      <tr>
+        {{!-- <th id='starred-heading'>Starred</th> --}}
+        <th id='include' {{action 'sortTableByInclude'}}>Include?</th>
+        <th id='id-heading' {{action 'sortTableById'}}>ID</th>
+        <th id='name-heading' {{action 'sortTableByName'}}>Name</th>
+        <th id='update-heading'>Update</th>
+        <th id='delete-heading'>Delete</th>
+      </tr>
+    </thead>
+    <tbody id='routines-table-body'>
+    {{#each model as |routinesEntry|}}
+      <tr class="file-row" data-id="{{routinesEntry.id}}">
+      <td><input type="checkbox"> {{#if routinesEntry.include}}checked{{/if}}</td>
+      <td>{{routinesEntry.id}}</td>
+      <td>{{routinesEntry.name}}</td>
+      <td><button class='btn-info' {{action "updateEntry"}}>Update</button></td>
+      <td><button class='btn-danger'{{action "deleteEntry"}}>Delete</button></td>
+      </tr>
+    {{/each}}
+  </tbody>
+  </table>
+</div>

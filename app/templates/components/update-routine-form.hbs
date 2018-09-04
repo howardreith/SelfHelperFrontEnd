@@ -1,0 +1,26 @@
+{{input type='hidden' value=routinesEntry.id}}
+<h3>Routine Name</h3>{{input value=routinesEntry.name}}
+<div id='Exercise 1' class='text-center'>
+  <div class='exercise col-sm-5'>
+    <h5>Exercise</h5>{{input value=routinesEntry.exercise1}}
+  </div>
+  <div class='reps col-sm-2'>
+    <h5>Reps</h5>{{input value=routinesEntry.reps1}}
+  </div>
+  <div class='sets col-sm-2'>
+    <h5>Sets</h5>{{input value=routinesEntry.sets1}}
+  </div>
+  <div class='next-exercise-button col-sm-3'>
+    <button class="btn btn-info" {{action "show2"}}>Next Exercise</button>
+  </div>
+</div>
+
+<div id='update-routine-button' class='text-center'>
+  <button type="submit" tabIndex='1' class="btn btn-primary" {{action "submit"}}>
+  Save Routine
+  </button>
+
+  <button class="btn btn-default" {{action "cancel"}}>
+  Cancel
+  </button>
+</div>
