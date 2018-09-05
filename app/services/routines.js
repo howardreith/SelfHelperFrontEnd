@@ -37,8 +37,8 @@ export default Service.extend({
   },
 
   updateRoutinesEntry (entry) {
-    console.log('updateRoutinesEntry was run in the service')
-    console.log('entry in the udpateRoutinesEntry service is ', entry)
+    // console.log('updateRoutinesEntry was run in the service')
+    // console.log('entry in the updateRoutinesEntry service is ', entry)
     return this.get('ajax').patch('/routines/' + entry.id, {
       data: {
         routine: {

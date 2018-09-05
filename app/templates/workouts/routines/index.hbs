@@ -21,7 +21,9 @@
     <tbody id='routines-table-body'>
     {{#each model as |routinesEntry|}}
       <tr class="file-row" data-id="{{routinesEntry.id}}">
-      <td><input type="checkbox"> {{#if routinesEntry.include}}checked{{/if}}</td>
+      <td><input type="checkbox" checked={{routinesEntry.include}} {{action 'checkEntry'}}></td>
+
+      {{!-- {{#if routinesEntry.include}}checked{{/if}} --}}
       <td>{{routinesEntry.id}}</td>
       <td>{{routinesEntry.name}}</td>
       <td><button class='btn-info' {{action "updateEntry"}}>Update</button></td>

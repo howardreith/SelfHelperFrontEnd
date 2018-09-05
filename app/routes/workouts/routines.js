@@ -33,6 +33,20 @@ export default Route.extend({
       // console.log('clickedRow is ', clickedRow)
       this.transitionTo('/workouts/routines/' + clickedRow)
     },
+    checkEntry () {
+      const clickedRow = event.target.parentNode.parentNode.getElementsByTagName('td')[1].innerText
+      // console.log('event is ', event)
+      // console.log('event.target.checked is ', event.target.checked)
+      const entry = {}
+      entry.id = clickedRow
+      if (event.target.checked) {
+        entry.include = true
+      } else if (!event.target.checked) {
+        entry.include = false
+      }
+      this.get('routines').updateRoutinesEntry(entry)
+        .then(() => this.refresh())
+    },
     deleteEntry () {
       // console.log('deleteEntry was activated.')
       const clickedRow = event.target.parentNode.parentNode.getElementsByTagName('td')[1].innerText
