@@ -1,1 +1,29 @@
 {{left-nav-workouts}}
+
+<div id="workouts-list" class='workouts-list-container'>
+  <div class='workouts-list-heading text-center'>
+    <h3>Workouts</h3>
+  </div>
+  <table id='workouts-table' class='table table-striped'>
+    <thead>
+      <tr>
+        <th id='workouts-id-heading' {{action 'sortTableById'}}>ID</th>
+        <th id='workouts-date-created-heading' {{action 'sortTableByDate'}}>Date Created</th>
+        <th id='workouts-name-heading' {{action 'sortTableByWorkoutName'}}>Name</th>
+        <th id='exposures-update-heading'>Update</th>
+        <th id='exposures-delete-heading'>Delete</th>
+      </tr>
+    </thead>
+    <tbody id='workouts-table-body'>
+    {{#each model as |workout|}}
+      <tr class="file-row" data-id="{{workout.id}}">
+      <td>{{workout.id}}</td>
+      <td>{{workout.updated_at}}</td>
+      <td>{{workout.name}}</td>
+      <td><button class='btn-info' {{action "updateEntry"}}>Update</button></td>
+      <td><button class='btn-danger'{{action "deleteEntry"}}>Delete</button></td>
+      </tr>
+    {{/each}}
+  </tbody>
+  </table>
+</div>

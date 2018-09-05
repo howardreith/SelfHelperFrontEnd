@@ -1,0 +1,31 @@
+SOMETHING
+
+<div id="routines-list" class='routines-list-container'>
+  <div class='routines-list-heading text-center'>
+    <h3>Routines</h3>
+  </div>
+  <table id='routines-table' class='table table-striped'>
+    <thead>
+      <tr>
+        <th id='routine-name-heading'></th>
+      </tr>
+    </thead>
+    <tbody id='routines-table-body'>
+    {{#each routines as |routine|}}
+      <td>{{input value=routine.name}}</td>
+    {{/each}}
+  </tbody>
+  </table>
+</div>
+
+
+
+
+<p>{{routine.[1].name}}</p>
+<ul>
+{{#each routines as |routine|}}
+  <li>{{routine.name}}</li>
+{{/each}}
+</ul>
+
+<h4>Name</h4>{{input value=routines}}

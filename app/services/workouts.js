@@ -11,46 +11,45 @@ export default Service.extend({
   // a boolean, true if credentials.token exists
   isAuthenticated: bool('credentials.token'),
 
-  createRoutinesEntry () {
+  createWorkoutsEntry () {
   // console.log('createColumnsEntry was called in the final stage')
-    return this.get('ajax').post('/routines', {
+    return this.get('ajax').post('/workouts', {
       data: {
-        exposure: {
+        workout: {
           name: ''
         }
       }
     })
   },
 
-  getRoutinesEntries () {
-  // console.log('getColumnMethods was run!')
-    const routinesEntries = this.get('ajax').request('/routines')
+  getWorkoutsEntries () {
+    console.log('getWorkoutsEntries was run!')
+    const workoutsEntries = this.get('ajax').request('/workouts')
   // console.log(columnEntries)
-    return routinesEntries
+    return workoutsEntries
   },
 
-  getRoutinesEntry (id) {
+  getWorkoutsEntry (id) {
   // console.log('getColumnsEntry was run!')
-    const routinesEntry = this.get('ajax').request('/routines/' + id)
+    const workoutsEntry = this.get('ajax').request('/workouts/' + id)
   // console.log('columnEntry is ', columnEntry)
-    return routinesEntry
+    return workoutsEntry
   },
 
-  updateRoutinesEntry (entry) {
+  updateWorkoutsEntry (entry) {
   // console.log('updateColumnEntry was run in the service')
     // console.log('entry in the updateColumnEntry service is ', entry)
-    return this.get('ajax').patch('/routines/' + entry.id, {
+    return this.get('ajax').patch('/workouts/' + entry.id, {
       data: {
-        exposure: {
-          include: entry.include,
+        workout: {
           name: entry.name
         }
       }
     })
   },
-  deleteExposuresEntry (id) {
+  deleteWorkoutsEntry (id) {
   // console.log('deleteColumnEntry was run in the service.')
   // console.log('id in the deleteColumnEntry service is ', id)
-    return this.get('ajax').del('/routines/' + id)
+    return this.get('ajax').del('/workouts/' + id)
   }
 })

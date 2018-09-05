@@ -13,8 +13,8 @@ export default Route.extend({
       // console.log('createColumnsEntry was called in columns.js route')
       this.get('workouts').createWorkoutsEntry()
         .then((response) => {
-          // console.log('response is ', response)
-          // console.log('response.colum_method.id is ', response.colum_method.id)
+          console.log('response is ', response)
+          console.log('response.workout.id is ', response.workout.id)
           this.transitionTo('/workouts/' + response.workout.id)
         })
         .then(() => {
