@@ -1,4 +1,5 @@
 import Route from '@ember/routing/route'
+import Ember from 'ember'
 import { inject as service } from '@ember/service'
 
 export default Route.extend({
@@ -26,15 +27,14 @@ export default Route.extend({
     }
   },
 
-  model () {
+  model (params) {
     const routinesResponse = this.get('routines').getRoutinesEntries()
     console.log('routinesResponse is ', routinesResponse)
-    return routinesResponse
-    .then((result) => {
-      console.log('routines result is', result)
-      console.log('result.routines is ', result.routines)
-      // result.exposure.updated_at = result.exposure.updated_at.slice(0, -5).split('T').join('  ')
-      return result.routines
+    const workoutsResponse = this.get('workouts').getWorkoutsEntry(params.workout_id)
+    console.log('workoutsResponse is ', workoutsResponse)
+    return Ember.RSVP.hash({
+      routines: routinesResponse,
+      workout: workoutsResponse
     })
   }
 })
