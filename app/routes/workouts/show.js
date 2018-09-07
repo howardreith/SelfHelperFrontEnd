@@ -39,6 +39,22 @@ export default Route.extend({
       routines: routinesResponse,
       workout: workoutsResponse
     })
+    .then((result) => {
+      // console.log('routines is ', result.routines)
+      // console.log('workout is ', result.workout)
+      const newRoutinesResponse = []
+      for (let i = 0; i < result.routines.routines.length; i++) {
+        if (result.routines.routines[i].include) {
+          newRoutinesResponse.push(result.routines.routines[i])
+        }
+        // console.log('newRoutinesResponse is ', newRoutinesResponse)
+      }
+      // console.log('newRoutinesResponse outside is ', newRoutinesResponse)
+      result.routines.routines = newRoutinesResponse
+      // console.log('result.routines.routines after is ', result.routines.routines)
+      // console.log('routines revised is ', result.routines)
+      return result
+    })
   }
 })
   // beforeModel () {
