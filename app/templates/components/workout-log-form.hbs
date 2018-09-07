@@ -1,8 +1,18 @@
+<select onchange={{action (mut routine) value="target.value"}}>
+  {{#each model.routines.routines as |routine|}}
+    <option value={{routine.name}} selected={{eq routine routineChoice}}>{{routine.name}}</option>
+  {{/each}}
+</select>
+
 <ul>
 {{#each model.routines.routines as |routine|}}
   <li>{{routine.name}}</li>
 {{/each}}
 </ul>
+
+{{!-- <ul>
+  {{view "select" content=#each model.routines.routines }}
+</ul> --}}
 
 <ul>
   <li>The name is</li>

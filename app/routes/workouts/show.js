@@ -30,6 +30,9 @@ export default Route.extend({
   model (params) {
     const routinesResponse = this.get('routines').getRoutinesEntries()
     console.log('routinesResponse is ', routinesResponse)
+    const routinesHash = Ember.RSVP.hash({routinesResponse})
+    console.log('routinesREsponse through the hash is ', routinesHash)
+    console.log('routinesResponse hash is ', routinesHash)
     const workoutsResponse = this.get('workouts').getWorkoutsEntry(params.workout_id)
     console.log('workoutsResponse is ', workoutsResponse)
     return Ember.RSVP.hash({
