@@ -3,7 +3,12 @@ import Component from '@ember/component'
 export default Component.extend({
   tagName: 'form',
   classNames: ['form-horizontal'],
-  entry: {}
+  entry: {},
+  routineChoice: null,
+  selectRoutine: function (routineChoice) {
+    this.set('routineChoice', routineChoice)
+    console.log('routineChoice is ', this.routineChoice)
+  }
 
   // actions: {
   //   submit () {
