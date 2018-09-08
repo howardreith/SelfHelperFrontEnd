@@ -7,6 +7,9 @@ export default Route.extend({
   routines: service(),
   flashMessages: service(),
   combinedResponse: {},
+  routineChoice: null,
+  routineChoiceIndex: null,
+  fullRoutineChoice: null,
 
   actions: {
     updateWorkoutsEntry (entry) {
@@ -24,6 +27,14 @@ export default Route.extend({
     },
     cancel () {
       this.transitionTo('workouts.view')
+    },
+    selectRoutine (routineChoice, routineChoiceIndex, fullRoutineChoice) {
+      console.log('routineChoice in show.js is ', routineChoice)
+      console.log('routineChoiceIndex in show.js is ', routineChoiceIndex)
+      console.log('fullRoutineChoice in show.js is ', fullRoutineChoice)
+      this.set('routineChoice', routineChoice)
+      this.set('routineChoiceIndex', routineChoiceIndex)
+      // this.set('fullRoutineChoice', fullRoutineChoice)
     }
   },
 
@@ -40,7 +51,7 @@ export default Route.extend({
       workout: workoutsResponse
     })
     .then((result) => {
-      // console.log('routines is ', result.routines)
+      console.log('routines is ', result.routines)
       // console.log('workout is ', result.workout)
       const newRoutinesResponse = []
       for (let i = 0; i < result.routines.routines.length; i++) {
@@ -51,6 +62,7 @@ export default Route.extend({
       }
       // console.log('newRoutinesResponse outside is ', newRoutinesResponse)
       result.routines.routines = newRoutinesResponse
+      result.fullRoutineChoice = this.fullRoutineChoice
       // console.log('result.routines.routines after is ', result.routines.routines)
       console.log('result is ', result)
       return result

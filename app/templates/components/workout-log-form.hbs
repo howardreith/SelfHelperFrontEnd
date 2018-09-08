@@ -5,6 +5,10 @@
 </select>
 
 <ul>
+  <li>{{model.fullRoutineChoice.exercise1}}</li>
+</ul>
+
+<ul>
 {{#each model.routines.routines as |routine|}}
   <li>{{routine.name}}</li>
 {{/each}}
@@ -14,10 +18,25 @@
   {{view "select" content=#each model.routines.routines }}
 </ul> --}}
 
+{{#if indexIs0}}
+  <h2>{{model.routines.routines.[0].exercise1}}</h2>
+{{/if}}
+
+{{#if indexIs1}}
+  <h2>{{model.routines.routines.[1].exercise1}}</h2>
+{{/if}}
+
+{{#if indexIs2}}
+  <h2>{{model.routines.routines.[2].exercise1}}</h2>
+{{/if}}
+
+{{!-- <p>The test</p>
+<p>{{model.workout.workout.name}}</p>
+
 <ul>
   <li>The name is</li>
   <li>{{model.workout.workout.name}}</li>
-</ul>
+</ul> --}}
 
 {{!-- <div id="routines-list" class='routines-list-container'>
   <div class='routines-list-heading text-center'>
