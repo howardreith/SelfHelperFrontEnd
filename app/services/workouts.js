@@ -42,7 +42,9 @@ export default Service.extend({
     return this.get('ajax').patch('/workouts/' + entry.id, {
       data: {
         workout: {
-          name: entry.name
+          name: entry.name,
+          exercise1: entry.exercise1,
+          exercise1reps1: entry.exercise1reps1
         }
       }
     })

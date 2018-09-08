@@ -1,10 +1,10 @@
-<select id='routine-select' onchange={{action selectRoutine value="target.value"}}>
+<select id='routine-select' value=model.workout.workout.name onchange={{action selectRoutine value="target.value"}}>
   {{#each model.routines.routines as |routine|}}
     <option value={{routine.name}} selected={{eq routine routineChoice}}>{{routine.name}}</option>
   {{/each}}
 </select>
 
-<ul>
+{{!-- <ul>
   <li>{{model.fullRoutineChoice.exercise1}}</li>
 </ul>
 
@@ -12,14 +12,167 @@
 {{#each model.routines.routines as |routine|}}
   <li>{{routine.name}}</li>
 {{/each}}
-</ul>
+</ul> --}}
 
 {{!-- <ul>
   {{view "select" content=#each model.routines.routines }}
 </ul> --}}
-
+<h1>routineChoiceIndex is {{model.routineChoiceIndex}}</h1>
+<h1>get routineChoice index {{get model routineChoiceIndex}}</h1>
 {{#if indexIs0}}
-  <h2>{{model.routines.routines.[0].exercise1}}</h2>
+<div id="workout-log" class='workout-log-container'>
+  <table id='workout-log-table' class='table'>
+    <thead>
+      <tr>
+        <th id='workout-log-exercise-heading'>Exercise</th>
+        <th id='workout-log-set1-heading'>Set 1</th>
+        <th id='workout-log-set1-heading'>Set 2</th>
+        <th id='workout-log-set1-heading'>Set 3</th>
+        <th id='workout-log-set1-heading'>Set 4</th>
+        <th id='workout-log-set1-heading'>Set 5</th>
+        <th id='workout-log-set1-heading'>Set 6</th>
+        <th id='workout-log-set1-heading'>Set 7</th>
+        <th id='workout-log-set1-heading'>Set 8</th>
+      </tr>
+    </thead>
+    <tbody id='workout-log-table-body'>
+      {{#if model.routines.routines.[0].exercise1}}
+      <tr>
+        <td>{{model.routines.routines.[index].exercise1}}</td>
+        <td>{{input class='rep-input' value=model.workout.workout.exercise1reps1}}</td>
+        <td>{{input class='rep-input' value=model.workout.workout.exercise1reps2}}</td>
+        <td>{{input class='rep-input' value=model.workout.workout.exercise1reps3}}</td>
+        <td>{{input class='rep-input' value=model.workout.workout.exercise1reps4}}</td>
+        <td>{{input class='rep-input' value=model.workout.workout.exercise1reps5}}</td>
+        <td>{{input class='rep-input' value=model.workout.workout.exercise1reps6}}</td>
+        <td>{{input class='rep-input' value=model.workout.workout.exercise1reps7}}</td>
+        <td>{{input class='rep-input' value=model.workout.workout.exercise1reps8}}</td>
+      </tr>
+      {{/if}}
+      {{#if model.routines.routines.[0].exercise2}}
+      <tr>
+        <td>{{model.routines.routines.[0].exercise2}}</td>
+        <td>{{input class='rep-input' value=model.workout.workout.exercise2reps1}}</td>
+        <td>{{input class='rep-input' value=model.workout.workout.exercise2reps2}}</td>
+        <td>{{input class='rep-input' value=model.workout.workout.exercise2reps3}}</td>
+        <td>{{input class='rep-input' value=model.workout.workout.exercise2reps4}}</td>
+        <td>{{input class='rep-input' value=model.workout.workout.exercise2reps5}}</td>
+        <td>{{input class='rep-input' value=model.workout.workout.exercise2reps6}}</td>
+        <td>{{input class='rep-input' value=model.workout.workout.exercise2reps7}}</td>
+        <td>{{input class='rep-input' value=model.workout.workout.exercise2reps8}}</td>
+      </tr>
+      {{/if}}
+      {{#if model.routines.routines.[0].exercise3}}
+      <tr>
+        <td>{{model.routines.routines.[0].exercise3}}</td>
+        <td>{{input class='rep-input' value=model.workout.workout.exercise3reps1}}</td>
+        <td>{{input class='rep-input' value=model.workout.workout.exercise3reps2}}</td>
+        <td>{{input class='rep-input' value=model.workout.workout.exercise3reps3}}</td>
+        <td>{{input class='rep-input' value=model.workout.workout.exercise3reps4}}</td>
+        <td>{{input class='rep-input' value=model.workout.workout.exercise3reps5}}</td>
+        <td>{{input class='rep-input' value=model.workout.workout.exercise3reps6}}</td>
+        <td>{{input class='rep-input' value=model.workout.workout.exercise3reps7}}</td>
+        <td>{{input class='rep-input' value=model.workout.workout.exercise3reps8}}</td>
+      </tr>
+      {{/if}}
+      {{#if model.routines.routines.[0].exercise4}}
+      <tr>
+        <td>{{model.routines.routines.[0].exercise4}}</td>
+        <td>{{input class='rep-input' value=model.workout.workout.exercise4reps1}}</td>
+        <td>{{input class='rep-input' value=model.workout.workout.exercise4reps2}}</td>
+        <td>{{input class='rep-input' value=model.workout.workout.exercise4reps3}}</td>
+        <td>{{input class='rep-input' value=model.workout.workout.exercise4reps4}}</td>
+        <td>{{input class='rep-input' value=model.workout.workout.exercise4reps5}}</td>
+        <td>{{input class='rep-input' value=model.workout.workout.exercise4reps6}}</td>
+        <td>{{input class='rep-input' value=model.workout.workout.exercise4reps7}}</td>
+        <td>{{input class='rep-input' value=model.workout.workout.exercise4reps8}}</td>
+      </tr>
+      {{/if}}
+      {{#if model.routines.routines.[0].exercise5}}
+      <tr>
+        <td>{{model.routines.routines.[0].exercise5}}</td>
+        <td>{{input class='rep-input' value=model.workout.workout.exercise5reps1}}</td>
+        <td>{{input class='rep-input' value=model.workout.workout.exercise5reps2}}</td>
+        <td>{{input class='rep-input' value=model.workout.workout.exercise5reps3}}</td>
+        <td>{{input class='rep-input' value=model.workout.workout.exercise5reps4}}</td>
+        <td>{{input class='rep-input' value=model.workout.workout.exercise5reps5}}</td>
+        <td>{{input class='rep-input' value=model.workout.workout.exercise5reps6}}</td>
+        <td>{{input class='rep-input' value=model.workout.workout.exercise5reps7}}</td>
+        <td>{{input class='rep-input' value=model.workout.workout.exercise5reps8}}</td>
+      </tr>
+      {{/if}}
+      {{#if model.routines.routines.[0].exercise6}}
+      <tr>
+        <td>{{model.routines.routines.[0].exercise6}}</td>
+        <td>{{input class='rep-input' value=model.workout.workout.exercise6reps1}}</td>
+        <td>{{input class='rep-input' value=model.workout.workout.exercise6reps2}}</td>
+        <td>{{input class='rep-input' value=model.workout.workout.exercise6reps3}}</td>
+        <td>{{input class='rep-input' value=model.workout.workout.exercise6reps4}}</td>
+        <td>{{input class='rep-input' value=model.workout.workout.exercise6reps5}}</td>
+        <td>{{input class='rep-input' value=model.workout.workout.exercise6reps6}}</td>
+        <td>{{input class='rep-input' value=model.workout.workout.exercise6reps7}}</td>
+        <td>{{input class='rep-input' value=model.workout.workout.exercise6reps8}}</td>
+      </tr>
+      {{/if}}
+      {{#if model.routines.routines.[0].exercise7}}
+      <tr>
+        <td>{{model.routines.routines.[0].exercise7}}</td>
+        <td>{{input class='rep-input' value=model.workout.workout.exercise7reps1}}</td>
+        <td>{{input class='rep-input' value=model.workout.workout.exercise7reps2}}</td>
+        <td>{{input class='rep-input' value=model.workout.workout.exercise7reps3}}</td>
+        <td>{{input class='rep-input' value=model.workout.workout.exercise7reps4}}</td>
+        <td>{{input class='rep-input' value=model.workout.workout.exercise7reps5}}</td>
+        <td>{{input class='rep-input' value=model.workout.workout.exercise7reps6}}</td>
+        <td>{{input class='rep-input' value=model.workout.workout.exercise7reps7}}</td>
+        <td>{{input class='rep-input' value=model.workout.workout.exercise7reps8}}</td>
+      </tr>
+      {{/if}}
+      {{#if model.routines.routines.[0].exercise8}}
+      <tr>
+        <td>{{model.routines.routines.[0].exercise8}}</td>
+        <td>{{input class='rep-input' value=model.workout.workout.exercise8reps1}}</td>
+        <td>{{input class='rep-input' value=model.workout.workout.exercise8reps2}}</td>
+        <td>{{input class='rep-input' value=model.workout.workout.exercise8reps3}}</td>
+        <td>{{input class='rep-input' value=model.workout.workout.exercise8reps4}}</td>
+        <td>{{input class='rep-input' value=model.workout.workout.exercise8reps5}}</td>
+        <td>{{input class='rep-input' value=model.workout.workout.exercise8reps6}}</td>
+        <td>{{input class='rep-input' value=model.workout.workout.exercise8reps7}}</td>
+        <td>{{input class='rep-input' value=model.workout.workout.exercise8reps8}}</td>
+      </tr>
+      {{/if}}
+      {{#if model.routines.routines.[0].exercise9}}
+      <tr>
+        <td>{{model.routines.routines.[0].exercise9}}</td>
+        <td>{{input class='rep-input' value=model.workout.workout.exercise9reps1}}</td>
+        <td>{{input class='rep-input' value=model.workout.workout.exercise9reps2}}</td>
+        <td>{{input class='rep-input' value=model.workout.workout.exercise9reps3}}</td>
+        <td>{{input class='rep-input' value=model.workout.workout.exercise9reps4}}</td>
+        <td>{{input class='rep-input' value=model.workout.workout.exercise9reps5}}</td>
+        <td>{{input class='rep-input' value=model.workout.workout.exercise9reps6}}</td>
+        <td>{{input class='rep-input' value=model.workout.workout.exercise9reps7}}</td>
+        <td>{{input class='rep-input' value=model.workout.workout.exercise9reps8}}</td>
+      </tr>
+      {{/if}}
+      {{#if model.routines.routines.[0].exercise10}}
+      <tr>
+        <td>{{model.routines.routines.[0].exercise10}}</td>
+        <td>{{input class='rep-input' value=model.workout.workout.exercise10reps1}}</td>
+        <td>{{input class='rep-input' value=model.workout.workout.exercise10reps2}}</td>
+        <td>{{input class='rep-input' value=model.workout.workout.exercise10reps3}}</td>
+        <td>{{input class='rep-input' value=model.workout.workout.exercise10reps4}}</td>
+        <td>{{input class='rep-input' value=model.workout.workout.exercise10reps5}}</td>
+        <td>{{input class='rep-input' value=model.workout.workout.exercise10reps6}}</td>
+        <td>{{input class='rep-input' value=model.workout.workout.exercise10reps7}}</td>
+        <td>{{input class='rep-input' value=model.workout.workout.exercise10reps8}}</td>
+      </tr>
+      {{/if}}
+    </tbody>
+  </table>
+</div>
+
+<div id='save-workout-log-button-wrapper' class='text-center'>
+  <button class='btn btn-info' {{action 'submit'}}>Save Workout</button>
+</div>
 {{/if}}
 
 {{#if indexIs1}}
@@ -37,21 +190,3 @@
   <li>The name is</li>
   <li>{{model.workout.workout.name}}</li>
 </ul> --}}
-
-{{!-- <div id="routines-list" class='routines-list-container'>
-  <div class='routines-list-heading text-center'>
-    <h3>Routines</h3>
-  </div>
-  <table id='routines-table' class='table table-striped'>
-    <thead>
-      <tr>
-        <th id='routine-name-heading'></th>
-      </tr>
-    </thead>
-    <tbody id='routines-table-body'>
-    {{#each routines as |routine|}}
-      <td>{{input value=routine.name}}</td>
-    {{/each}}
-  </tbody>
-  </table>
-</div> --}}
