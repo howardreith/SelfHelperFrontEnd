@@ -62,8 +62,9 @@ export default Route.extend({
       }
       // console.log('newRoutinesResponse outside is ', newRoutinesResponse)
       result.routines.routines = newRoutinesResponse
+      result.routines.routines.unshift({name: 'Select Routine'})
       result.routineChoiceIndex = this.routineChoiceIndex
-      // console.log('result.routines.routines after is ', result.routines.routines)
+      console.log('result.routines.routines after is ', result.routines.routines)
       console.log('result is ', result)
       return result
     })

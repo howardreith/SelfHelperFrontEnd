@@ -1,4 +1,4 @@
-<select id='routine-select' value=model.fullRoutineChoice.name onchange={{action selectRoutine value="target.value"}}>
+<select id='routine-select' onchange={{action selectRoutine value="target.value"}}>
   {{#each model.routines.routines as |routine|}}
     <option value={{routine.name}} selected={{eq routine routineChoice}}>{{routine.name}}</option>
   {{/each}}
