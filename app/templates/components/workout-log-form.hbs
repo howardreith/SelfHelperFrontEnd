@@ -1,8 +1,10 @@
-<select id='routine-select' value=model.workout.workout.name onchange={{action selectRoutine value="target.value"}}>
+<select id='routine-select' value=model.fullRoutineChoice.name onchange={{action selectRoutine value="target.value"}}>
   {{#each model.routines.routines as |routine|}}
     <option value={{routine.name}} selected={{eq routine routineChoice}}>{{routine.name}}</option>
   {{/each}}
 </select>
+
+<button {{action 'modelTeller'}}>Model Teller</button>
 
 {{!-- <ul>
   <li>{{model.fullRoutineChoice.exercise1}}</li>

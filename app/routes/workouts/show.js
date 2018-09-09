@@ -67,5 +67,21 @@ export default Route.extend({
       console.log('result is ', result)
       return result
     })
+  },
+  afterModel (model) {
+    console.log('model in afterModel is ', model)
+    if (model.workout.workout.name) {
+      model.routineChoice = model.workout.workout.name
+      console.log('model.routineChoice is ', model.routineChoice)
+      for (let i = 0; i < model.routines.routines.length; i++) {
+        console.log('model.routines.routines is ', model.routines.routines)
+        if (model.routines.routines[i].name === model.routineChoice) {
+          model.routineChoiceIndex = i
+          console.log('model.routineChoice Index is ', model.routineChoiceIndex)
+        }
+      }
+      model.fullRoutineChoice = model.routines.routines[model.routineChoiceIndex]
+      console.log('model.fullRoutineChoice is ', model.fullRoutineChoice)
+    }
   }
 })
