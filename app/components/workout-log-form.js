@@ -32,12 +32,14 @@ export default Component.extend({
         }
       }
       this.set('fullRoutineChoice', this.model.routines.routines[this.routineChoiceIndex])
+      console.log('fullRoutineChoice is ', this.get('fullRoutineChoice'))
       // console.log('this.routineChoiceIndex is ', this.routineChoiceIndex)
       // console.log('model routines routines 0 name is ', this.model.routines.routines[0].name)
       // console.log('the length is ', this.model.routines.routines.length)
       // console.log('the full Routine Choice is ', this.fullRoutineChoice)
       // console.log('this.model.fullRoutineChoice is ', this.model.fullRoutineChoice)
       this.set('model.routineChoiceIndex', this.get('routineChoiceIndex'))
+      this.set('model.fullRoutineChoice', this.get('fullRoutineChoice'))
       console.log('model is ', this.model)
       this.sendAction('selectRoutine', this.routineChoice, this.routineChoiceIndex, this.fullRoutineChoice)
     },
