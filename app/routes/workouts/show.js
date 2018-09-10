@@ -29,9 +29,9 @@ export default Route.extend({
       this.transitionTo('workouts.view')
     },
     selectRoutine (routineChoice, routineChoiceIndex, fullRoutineChoice) {
-      console.log('routineChoice in show.js is ', routineChoice)
-      console.log('routineChoiceIndex in show.js is ', routineChoiceIndex)
-      console.log('fullRoutineChoice in show.js is ', fullRoutineChoice)
+      // console.log('routineChoice in show.js is ', routineChoice)
+      // console.log('routineChoiceIndex in show.js is ', routineChoiceIndex)
+      // console.log('fullRoutineChoice in show.js is ', fullRoutineChoice)
       this.set('routineChoice', routineChoice)
       this.set('routineChoiceIndex', routineChoiceIndex)
       // this.set('fullRoutineChoice', fullRoutineChoice)
@@ -51,7 +51,7 @@ export default Route.extend({
       workout: workoutsResponse
     })
     .then((result) => {
-      console.log('routines is ', result.routines)
+      // console.log('routines is ', result.routines)
       // console.log('workout is ', result.workout)
       const newRoutinesResponse = []
       for (let i = 0; i < result.routines.routines.length; i++) {
@@ -64,25 +64,25 @@ export default Route.extend({
       result.routines.routines = newRoutinesResponse
       result.routines.routines.unshift({name: 'Select Routine'})
       result.routineChoiceIndex = this.routineChoiceIndex
-      console.log('result.routines.routines after is ', result.routines.routines)
-      console.log('result is ', result)
+      // console.log('result.routines.routines after is ', result.routines.routines)
+      // console.log('result is ', result)
       return result
     })
   },
   afterModel (model) {
-    console.log('model in afterModel is ', model)
+    // console.log('model in afterModel is ', model)
     if (model.workout.workout.name) {
       model.routineChoice = model.workout.workout.name
-      console.log('model.routineChoice is ', model.routineChoice)
+      // console.log('model.routineChoice is ', model.routineChoice)
       for (let i = 0; i < model.routines.routines.length; i++) {
-        console.log('model.routines.routines is ', model.routines.routines)
+        // console.log('model.routines.routines is ', model.routines.routines)
         if (model.routines.routines[i].name === model.routineChoice) {
           model.routineChoiceIndex = i
-          console.log('model.routineChoice Index is ', model.routineChoiceIndex)
+          // console.log('model.routineChoice Index is ', model.routineChoiceIndex)
         }
       }
       model.fullRoutineChoice = model.routines.routines[model.routineChoiceIndex]
-      console.log('model.fullRoutineChoice is ', model.fullRoutineChoice)
+      // console.log('model.fullRoutineChoice is ', model.fullRoutineChoice)
     }
   }
 })

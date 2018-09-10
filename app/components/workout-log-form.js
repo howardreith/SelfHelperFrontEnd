@@ -7,15 +7,36 @@ export default Component.extend({
   routineChoice: null,
   routineChoiceIndex: null,
   fullRoutineChoice: null,
+  inputObject: {
+    exercise1sets2: true,
+    exercise1sets3: true,
+    exercise1sets4: true,
+    exercise1sets5: true,
+    exercise1sets6: true,
+    exercise1sets7: true,
+    exercise1sets8: true
+  },
+  inputShower: function () {
+    console.log('inputShower ran')
+    console.log('this.fullRoutineChoice ins inputshower is', this.fullRoutineChoice)
+    for (let i = 1; i <= 8; i++) {
+      if (i <= this.fullRoutineChoice.sets1) {
+        this.set(('inputObject.exercise1sets' + i), true)
+      } else {
+        this.set(('inputObject.exercise1sets' + i), false)
+      }
+    }
+  },
   init: function () {
     this._super()
-    console.log('init ran')
+    // console.log('init ran')
     if (this.model.routineChoice) {
       this.set('routineChoice', this.model.routineChoice)
     }
     if (this.model.fullRoutineChoice) {
       this.set('fullRoutineChoice', this.model.fullRoutineChoice)
-      console.log('fullRoutineChoice on init is ', this.get('fullRoutineChoice'))
+      this.inputShower()
+      // console.log('fullRoutineChoice on init is ', this.get('fullRoutineChoice'))
     }
   },
 
@@ -34,10 +55,11 @@ export default Component.extend({
       // console.log('model routines routines 0 name is ', this.model.routines.routines[0].name)
       // console.log('the length is ', this.model.routines.routines.length)
       // console.log('the full Routine Choice is ', this.fullRoutineChoice)
-      // console.log('this.model.fullRoutineChoice is ', this.model.fullRoutineChoice)
+      console.log('this.model.fullRoutineChoice is ', this.model.fullRoutineChoice)
       this.set('model.routineChoiceIndex', this.get('routineChoiceIndex'))
       this.set('model.fullRoutineChoice', this.get('fullRoutineChoice'))
-      console.log('model is ', this.model)
+      this.inputShower()
+      // console.log('model is ', this.model)
       this.sendAction('selectRoutine', this.routineChoice, this.routineChoiceIndex, this.fullRoutineChoice)
     },
     submit () {
@@ -169,7 +191,7 @@ export default Component.extend({
       this.entry.exercise10reps8 = this.get('model.workout.workout.exercise10reps8')
       this.entry.exercise10reps9 = this.get('model.workout.workout.exercise10reps9')
       this.entry.exercise10reps10 = this.get('model.workout.workout.exercise10reps10')
-      console.log('entry is ', this.get('entry'))
+      // console.log('entry is ', this.get('entry'))
       this.sendAction('submit', this.get('entry'))
     },
     cancel () {
