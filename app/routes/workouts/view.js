@@ -10,7 +10,7 @@ export default Route.extend({
     console.log('response is ', response)
     return response
     .then((result) => {
-      console.log('result is ', result.workouts)
+      // console.log('result is ', result.workouts)
       result.workouts.forEach((workout) => {
         workout.updated_at = workout.updated_at.slice(0, -5).split('T').join('  ')
         workout.updated_at = workout.created_at.slice(0, -5).split('T').join('  ')

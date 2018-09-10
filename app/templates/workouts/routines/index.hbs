@@ -1,6 +1,6 @@
 {{left-nav-workouts}}
 
-<div id="routines-list" class='routines-list-container'>
+<div id="routines-list" class='routines-list-container text-center'>
   <div class='routine-list-heading'>
     <h3>Routines</h3>
   </div>
@@ -11,11 +11,11 @@
     <thead>
       <tr>
         {{!-- <th id='starred-heading'>Starred</th> --}}
-        <th id='include' {{action 'sortTableByInclude'}}>Include?</th>
-        <th id='id-heading' {{action 'sortTableById'}}>ID</th>
-        <th id='name-heading' {{action 'sortTableByName'}}>Name</th>
-        <th id='update-heading'>Update</th>
-        <th id='delete-heading'>Delete</th>
+        <th class='table-heading' id='include' {{action 'sortTableByInclude'}}>Include?</th>
+        <th class='table-heading' id='id-heading' {{action 'sortTableById'}}>ID</th>
+        <th class='table-heading' id='name-heading' {{action 'sortTableByName'}}>Name</th>
+        <th class='table-heading' id='update-heading'>Update</th>
+        <th class='table-heading' id='delete-heading'>Delete</th>
       </tr>
     </thead>
     <tbody id='routines-table-body'>

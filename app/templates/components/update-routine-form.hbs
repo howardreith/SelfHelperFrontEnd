@@ -1,5 +1,7 @@
 {{input type='hidden' value=routinesEntry.id}}
-<h3>Routine Name</h3>{{input value=routinesEntry.name}}
+<div id='routine-name-heading-wrapper' class='text-center'>
+<h3>Routine Name</h3>{{input class='routine-name-input' value=routinesEntry.name}}
+</div>
 <div id='exercise 1' class='text-center'>
   <div class='exercise col-sm-6'>
     <h5>Exercise</h5>{{input value=routinesEntry.exercise1}}
@@ -139,10 +141,10 @@
 {{/if}}
 
 <div class='next-exercise-button text-center'>
-  <button class="btn btn-info" {{action "showNext"}}>Add Exercise</button>
+  <button id='next-exercise-button' class="btn btn-info" {{action "showNext"}}>Add Exercise</button>
 </div>
 
-<div id='update-routine-button' class='text-center'>
+<div class='text-center'>
   <button type="submit" tabIndex='1' class="btn btn-primary" {{action "submit"}}>
   Save Routine
   </button>
