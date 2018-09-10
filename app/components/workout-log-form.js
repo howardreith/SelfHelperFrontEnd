@@ -8,22 +8,156 @@ export default Component.extend({
   routineChoiceIndex: null,
   fullRoutineChoice: null,
   inputObject: {
-    exercise1sets2: true,
-    exercise1sets3: true,
-    exercise1sets4: true,
-    exercise1sets5: true,
-    exercise1sets6: true,
-    exercise1sets7: true,
-    exercise1sets8: true
+    exercise1sets1: false,
+    exercise1sets2: false,
+    exercise1sets3: false,
+    exercise1sets4: false,
+    exercise1sets5: false,
+    exercise1sets6: false,
+    exercise1sets7: false,
+    exercise1sets8: false,
+    exercise2sets1: false,
+    exercise2sets2: false,
+    exercise2sets3: false,
+    exercise2sets4: false,
+    exercise2sets5: false,
+    exercise2sets6: false,
+    exercise2sets7: false,
+    exercise2sets8: false,
+    exercise3sets1: false,
+    exercise3sets2: false,
+    exercise3sets3: false,
+    exercise3sets4: false,
+    exercise3sets5: false,
+    exercise3sets6: false,
+    exercise3sets7: false,
+    exercise3sets8: false,
+    exercise4sets1: false,
+    exercise4sets2: false,
+    exercise4sets3: false,
+    exercise4sets4: false,
+    exercise4sets5: false,
+    exercise4sets6: false,
+    exercise4sets7: false,
+    exercise4sets8: false,
+    exercise5sets1: false,
+    exercise5sets2: false,
+    exercise5sets3: false,
+    exercise5sets4: false,
+    exercise5sets5: false,
+    exercise5sets6: false,
+    exercise5sets7: false,
+    exercise5sets8: false,
+    exercise6sets1: false,
+    exercise6sets2: false,
+    exercise6sets3: false,
+    exercise6sets4: false,
+    exercise6sets5: false,
+    exercise6sets6: false,
+    exercise6sets7: false,
+    exercise6sets8: false,
+    exercise7sets1: false,
+    exercise7sets2: false,
+    exercise7sets3: false,
+    exercise7sets4: false,
+    exercise7sets5: false,
+    exercise7sets6: false,
+    exercise7sets7: false,
+    exercise7sets8: false,
+    exercise8sets1: false,
+    exercise8sets2: false,
+    exercise8sets3: false,
+    exercise8sets4: false,
+    exercise8sets5: false,
+    exercise8sets6: false,
+    exercise8sets7: false,
+    exercise8sets8: false,
+    exercise9sets1: false,
+    exercise9sets2: false,
+    exercise9sets3: false,
+    exercise9sets4: false,
+    exercise9sets5: false,
+    exercise9sets6: false,
+    exercise9sets7: false,
+    exercise9sets8: false,
+    exercise10sets1: false,
+    exercise10sets2: false,
+    exercise10sets3: false,
+    exercise10sets4: false,
+    exercise10sets5: false,
+    exercise10sets6: false,
+    exercise10sets7: false,
+    exercise10sets8: false
   },
   inputShower: function () {
-    console.log('inputShower ran')
-    console.log('this.fullRoutineChoice ins inputshower is', this.fullRoutineChoice)
     for (let i = 1; i <= 8; i++) {
-      if (i <= this.fullRoutineChoice.sets1) {
+      if (i <= this.get('fullRoutineChoice.sets1')) {
         this.set(('inputObject.exercise1sets' + i), true)
       } else {
         this.set(('inputObject.exercise1sets' + i), false)
+      }
+    }
+    for (let i = 1; i <= 8; i++) {
+      if (i <= this.get('fullRoutineChoice.sets2')) {
+        this.set(('inputObject.exercise2sets' + i), true)
+      } else {
+        this.set(('inputObject.exercise2sets' + i), false)
+      }
+    }
+    for (let i = 1; i <= 8; i++) {
+      if (i <= this.get('fullRoutineChoice.sets3')) {
+        this.set(('inputObject.exercise3sets' + i), true)
+      } else {
+        this.set(('inputObject.exercise3sets' + i), false)
+      }
+    }
+    for (let i = 1; i <= 8; i++) {
+      if (i <= this.get('fullRoutineChoice.sets4')) {
+        this.set(('inputObject.exercise4sets' + i), true)
+      } else {
+        this.set(('inputObject.exercise4sets' + i), false)
+      }
+    }
+    for (let i = 1; i <= 8; i++) {
+      if (i <= this.get('fullRoutineChoice.sets5')) {
+        this.set(('inputObject.exercise5sets' + i), true)
+      } else {
+        this.set(('inputObject.exercise5sets' + i), false)
+      }
+    }
+    for (let i = 1; i <= 8; i++) {
+      if (i <= this.get('fullRoutineChoice.sets6')) {
+        this.set(('inputObject.exercise6sets' + i), true)
+      } else {
+        this.set(('inputObject.exercise6sets' + i), false)
+      }
+    }
+    for (let i = 1; i <= 8; i++) {
+      if (i <= this.get('fullRoutineChoice.sets7')) {
+        this.set(('inputObject.exercise7sets' + i), true)
+      } else {
+        this.set(('inputObject.exercise7sets' + i), false)
+      }
+    }
+    for (let i = 1; i <= 8; i++) {
+      if (i <= this.get('fullRoutineChoice.sets8')) {
+        this.set(('inputObject.exercise8sets' + i), true)
+      } else {
+        this.set(('inputObject.exercise8sets' + i), false)
+      }
+    }
+    for (let i = 1; i <= 8; i++) {
+      if (i <= this.get('fullRoutineChoice.sets9')) {
+        this.set(('inputObject.exercise9sets' + i), true)
+      } else {
+        this.set(('inputObject.exercise9sets' + i), false)
+      }
+    }
+    for (let i = 1; i <= 8; i++) {
+      if (i <= this.get('fullRoutineChoice.sets10')) {
+        this.set(('inputObject.exercise10sets' + i), true)
+      } else {
+        this.set(('inputObject.exercise10sets' + i), false)
       }
     }
   },
