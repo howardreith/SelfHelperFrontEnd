@@ -11,11 +11,10 @@ export default Route.extend({
     return response
     .then((result) => {
       console.log('result is ', result.workouts)
-      // result.workouts.forEach((workout) => {
-        // console.log('colum_method is ', colum_method)
-        // workout.updated_at = workout.updated_at.slice(0, -5).split('T').join('  ')
-        // workout.updated_at = workout.created_at.slice(0, -5).split('T').join('  ')
-      // })
+      result.workouts.forEach((workout) => {
+        workout.updated_at = workout.updated_at.slice(0, -5).split('T').join('  ')
+        workout.updated_at = workout.created_at.slice(0, -5).split('T').join('  ')
+      })
       // console.log('result.colum_methods is ', result.colum_methods)
       return result.workouts
     })
