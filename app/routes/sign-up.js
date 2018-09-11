@@ -1,6 +1,6 @@
 import Route from '@ember/routing/route'
 import { inject as service } from '@ember/service'
-import RSVP from 'rsvp'
+// import RSVP from 'rsvp'
 
 export default Route.extend({
   auth: service(),
@@ -13,7 +13,7 @@ export default Route.extend({
   actions: {
     signUp (credentials) {
       this.get('auth').signUp(credentials)
-        .then(() => this.get('auth').signIn(credentials))
+        .then(() => this.get('auth').firstSignIn(credentials))
         .then(() => this.transitionTo('journal'))
         .then(() => {
           this.get('flashMessages')
