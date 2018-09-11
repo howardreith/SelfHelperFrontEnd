@@ -8,30 +8,30 @@
     <thead>
       <tr>
         {{!-- <th id='starred-heading'>Starred</th> --}}
-        <th id='columns-id-heading' {{action 'sortTableById'}}>ID</th>
-        <th id='columns-date-created-heading' {{action 'sortTableByDate'}}>Date Created</th>
-        <th id='columns-event-heading' {{action 'sortTableByEvent'}}>Event</th>
-        <th id='columns-emotion-heading' {{action 'sortTableByEmotion'}}>Emotion</th>
-        <th id='columns-autothought-heading' {{action 'sortTableByAutothought'}}>Automatic Thought</th>
-        <th id='columns-distortion-heading' {{action 'sortTableByDistortion'}}>Distortion</th>
-        <th id='columns-response-heading' {{action 'sortTableByResponse'}}>Response</th>
-        <th id='columns-update-heading'>Update</th>
-        <th id='columns-delete-heading'>Delete</th>
+        <th id='columns-id-heading' class='table-heading' {{action 'sortTableById'}}>ID</th>
+        <th id='columns-date-created-heading' class='table-heading' {{action 'sortTableByDate'}}>Last Updated</th>
+        <th id='columns-event-heading' class='table-heading' {{action 'sortTableByEvent'}}>Event</th>
+        <th id='columns-emotion-heading' class='table-heading' {{action 'sortTableByEmotion'}}>Emotion</th>
+        <th id='columns-autothought-heading' class='table-heading'{{action 'sortTableByAutothought'}}>Automatic Thought</th>
+        <th id='columns-distortion-heading' class='table-heading' {{action 'sortTableByDistortion'}}>Distortion</th>
+        <th id='columns-response-heading' class='table-heading' {{action 'sortTableByResponse'}}>Response</th>
+        <th id='columns-update-heading' class='table-heading'>Update</th>
+        <th id='columns-delete-heading' class='table-heading'>Delete</th>
       </tr>
     </thead>
     <tbody id='columns-table-body'>
     {{#each model as |colum_method|}}
       <tr class="file-row" data-id="{{colum_method.id}}">
       {{!-- <td>{{journalEntry.starred}}</td> --}}
-      <td>{{colum_method.id}}</td>
-      <td>{{colum_method.updated_at}}</td>
-      <td>{{colum_method.event}}</td>
-      <td>{{colum_method.emotion}}</td>
-      <td>{{colum_method.autothought}}</td>
-      <td>{{colum_method.distortion}}</td>
-      <td>{{colum_method.response}}</td>
-      <td><button class='btn-info' {{action "updateEntry"}}>Update</button></td>
-      <td><button class='btn-danger'{{action "deleteEntry"}}>Delete</button></td>
+      <td class='text-center'>{{colum_method.id}}</td>
+      <td class='text-center'>{{colum_method.updated_at}}</td>
+      <td class='text-center'>{{colum_method.event}}</td>
+      <td class='text-center'>{{colum_method.emotion}}</td>
+      <td class='text-center'>{{colum_method.autothought}}</td>
+      <td class='text-center'>{{colum_method.distortion}}</td>
+      <td class='text-center'>{{colum_method.response}}</td>
+      <td class='text-center'><button class='btn-info' {{action "updateEntry"}}>Update</button></td>
+      <td class='text-center'><button class='btn-danger'{{action "deleteEntry"}}>Delete</button></td>
       </tr>
     {{/each}}
   </tbody>

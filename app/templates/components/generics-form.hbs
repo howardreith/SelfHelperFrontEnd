@@ -6,10 +6,10 @@
     <thead>
       <tr>
         {{!-- <th id='starred-heading'>Starred</th> --}}
-        <th id='exposures-id-heading' {{action 'sortTableById'}}>ID</th>
-        <th id='generic-activity-heading' {{action 'sortTableByActivity'}}>Activity</th>
-        <th id='generic-fear-heading' {{action 'sortTableByFearLevel'}}>Fear Level</th>
-        <th id='generic-delete-heading'>Delete</th>
+        <th id='exposures-id-heading' class='table-heading' {{action 'sortTableById'}}>ID</th>
+        <th id='generic-activity-heading' class='table-heading' {{action 'sortTableByActivity'}}>Activity</th>
+        <th id='generic-fear-heading' class='table-heading' {{action 'sortTableByFearLevel'}}>Fear Level</th>
+        <th id='generic-delete-heading' class='table-heading'>Delete</th>
         <span class="table-add glyphicon glyphicon-plus" {{action 'createGenericsEntry'}}></span>
       </tr>
     </thead>
@@ -17,11 +17,11 @@
     {{#each genericsEntries as |generic|}}
       <tr class="file-row" data-id="{{generic.id}}">
       {{!-- <td>{{journalEntry.starred}}</td> --}}
-      <td>{{generic.id}}</td>
-      <td>{{input value=generic.activity}}</td>
-      <td>{{input type="number" value=generic.fear_level}}</td>
+      <td class='text-center'>{{generic.id}}</td>
+      <td class='text-center'>{{input value=generic.activity}}</td>
+      <td class='text-center'>{{input type="number" value=generic.fear_level}}</td>
       {{!-- <td><button class='btn-info' {{action "updateEntry"}}>Update</button></td> --}}
-      <td><button class='btn-danger'{{action "deleteEntry"}}>Delete</button></td>
+      <td class='text-center'><button class='btn-danger'{{action "deleteEntry"}}>Delete</button></td>
       </tr>
     {{/each}}
   </tbody>

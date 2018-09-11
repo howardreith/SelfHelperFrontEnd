@@ -37,10 +37,6 @@ export default Route.extend({
         .then(() => {
           this.refresh()
         })
-        .then(() => {
-          this.get('flashMessages')
-            .success('Successfully created a generics entry.')
-        })
         .catch(() => {
           this.get('flashMessages')
             .danger('There was a problem. Please try again.')

@@ -7,7 +7,6 @@ export default Route.extend({
 
   model () {
     const response = this.get('routines').getRoutinesEntries()
-    console.log('response is ', response)
     return response
     .then((result) => {
       // console.log('result is ', result.downward_arrow)

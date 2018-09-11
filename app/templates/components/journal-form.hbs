@@ -1,12 +1,14 @@
 {{input type='hidden' value=journalEntry.id}}
-<h4>Title</h4>{{input value=journalEntry.title}}
-<h5>{{journalEntry.updated_at}}</h5>
-<h4>Content</h4>{{textarea class='journal-input' value=journalEntry.content}}
+<h4></h4>{{input value=journalEntry.title placeholder='Add Title' class='journal-title'}}
+<h5>Last Updated {{journalEntry.updated_at}}</h5>
+<h4></h4>{{textarea class='journal-input' value=journalEntry.content placeholder='Add content here'}}
 
-<button type="submit" class="btn btn-primary" {{action "submit"}}>
-  Update Journal Entry
-</button>
+<div class='text-center'>
+  <button type="submit" class="btn btn-primary" {{action "submit"}}>
+    Update Journal Entry
+  </button>
 
-<button class="btn btn-default" {{action "cancel"}}>
-  Cancel
-</button>
+  <button class="btn btn-default" {{action "cancel"}}>
+    Cancel
+  </button>
+</div>

@@ -23,6 +23,8 @@ export default Component.extend({
         // console.log('entry is ', this.entry)
         this.sendAction('submit', this.get('entry'))
       }
+      this.get('flashMessages')
+          .success('Successfully updated entry.')
     },
     createGenericsEntry () {
       this.sendAction('createGenericsEntry')

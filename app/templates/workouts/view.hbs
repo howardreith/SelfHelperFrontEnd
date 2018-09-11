@@ -7,21 +7,21 @@
   <table id='workouts-table' class='table table-striped'>
     <thead>
       <tr>
-        <th id='workouts-id-heading' {{action 'sortTableById'}}>ID</th>
-        <th id='workouts-date-created-heading' {{action 'sortTableByDate'}}>Date Created</th>
-        <th id='workouts-name-heading' {{action 'sortTableByWorkoutName'}}>Name</th>
-        <th id='exposures-update-heading'>Update</th>
-        <th id='exposures-delete-heading'>Delete</th>
+        <th id='workouts-id-heading' class='table-heading' {{action 'sortTableById'}}>ID</th>
+        <th id='workouts-date-created-heading' class='table-heading' {{action 'sortTableByDate'}}>Last Updated</th>
+        <th id='workouts-name-heading' class='table-heading' {{action 'sortTableByWorkoutName'}}>Name</th>
+        <th id='exposures-update-heading' class='table-heading'>Update</th>
+        <th id='exposures-delete-heading' class='table-heading'>Delete</th>
       </tr>
     </thead>
     <tbody id='workouts-table-body'>
     {{#each model as |workout|}}
       <tr class="file-row" data-id="{{workout.id}}">
-      <td>{{workout.id}}</td>
-      <td>{{workout.updated_at}}</td>
-      <td>{{workout.name}}</td>
-      <td><button class='btn-info' {{action "updateEntry"}}>Update</button></td>
-      <td><button class='btn-danger'{{action "deleteEntry"}}>Delete</button></td>
+      <td class='text-center'>{{workout.id}}</td>
+      <td class='text-center'>{{workout.updated_at}}</td>
+      <td class='text-center'>{{workout.name}}</td>
+      <td class='text-center'><button class='btn-info' {{action "updateEntry"}}>Update</button></td>
+      <td class='text-center'><button class='btn-danger'{{action "deleteEntry"}}>Delete</button></td>
       </tr>
     {{/each}}
   </tbody>

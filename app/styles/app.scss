@@ -69,8 +69,17 @@
 }
 
 .journal-input {
-  height: 350px;
+  height: 400px;
+  overflow-y: scroll;
   width: 100%;
+  font-size: 20px;
+}
+
+.journal-title {
+  text-align: center;
+  font-weight: bold;
+  font-size: 30px;
+  height: 40px;
 }
 
 .journal-front {
@@ -98,6 +107,10 @@
 }
 
 .columns-list-heading {
+  text-align: center;
+}
+
+.table-input-center {
   text-align: center;
 }
 

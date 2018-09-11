@@ -8,28 +8,28 @@
     <thead>
       <tr>
         {{!-- <th id='starred-heading'>Starred</th> --}}
-        <th id='exposures-id-heading' {{action 'sortTableById'}}>ID</th>
-        <th id='exposures-date-created-heading' {{action 'sortTableByDate'}}>Date Created</th>
-        <th id='exposures-action-heading' {{action 'sortTableByAction'}}>Action</th>
-        <th id='exposures-prediction-heading' {{action 'sortTableByPrediction'}}>Predicted Fear</th>
-        <th id='exposures-actual-heading' {{action 'sortTableByActual'}}>Actual Fear</th>
-        <th id='exposures-satisfaction-heading' {{action 'sortTableBySatisfaction'}}>Satisfaction</th>
-        <th id='exposures-update-heading'>Update</th>
-        <th id='exposures-delete-heading'>Delete</th>
+        <th id='exposures-id-heading' class='table-heading' {{action 'sortTableById'}}>ID</th>
+        <th id='exposures-date-created-heading' class='table-heading' {{action 'sortTableByDate'}}>Last Updated</th>
+        <th id='exposures-action-heading' class='table-heading' {{action 'sortTableByAction'}}>Action</th>
+        <th id='exposures-prediction-heading' class='table-heading' {{action 'sortTableByPrediction'}}>Predicted Fear</th>
+        <th id='exposures-actual-heading' class='table-heading' {{action 'sortTableByActual'}}>Actual Fear</th>
+        <th id='exposures-satisfaction-heading' class='table-heading' {{action 'sortTableBySatisfaction'}}>Satisfaction</th>
+        <th id='exposures-update-heading' class='table-heading'>Update</th>
+        <th id='exposures-delete-heading' class='table-heading'>Delete</th>
       </tr>
     </thead>
     <tbody id='exposures-table-body'>
     {{#each model as |exposure|}}
       <tr class="file-row" data-id="{{exposure.id}}">
       {{!-- <td>{{journalEntry.starred}}</td> --}}
-      <td>{{exposure.id}}</td>
-      <td>{{exposure.updated_at}}</td>
-      <td>{{exposure.action}}</td>
-      <td>{{exposure.prediction}}</td>
-      <td>{{exposure.actual}}</td>
-      <td>{{exposure.satisfaction}}</td>
-      <td><button class='btn-info' {{action "updateEntry"}}>Update</button></td>
-      <td><button class='btn-danger'{{action "deleteEntry"}}>Delete</button></td>
+      <td class='text-center'>{{exposure.id}}</td>
+      <td class='text-center'>{{exposure.updated_at}}</td>
+      <td class='text-center'>{{exposure.action}}</td>
+      <td class='text-center'>{{exposure.prediction}}</td>
+      <td class='text-center'>{{exposure.actual}}</td>
+      <td class='text-center'>{{exposure.satisfaction}}</td>
+      <td class='text-center'><button class='btn-info' {{action "updateEntry"}}>Update</button></td>
+      <td class='text-center'><button class='btn-danger'{{action "deleteEntry"}}>Delete</button></td>
       </tr>
     {{/each}}
   </tbody>
