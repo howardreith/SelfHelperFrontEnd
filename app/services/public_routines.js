@@ -43,7 +43,7 @@ export default Service.extend({
           reps4: routine.reps4,
           exercise5: routine.exercise5,
           sets5: routine.sets5,
-          reps5: routine.resp5,
+          reps5: routine.reps5,
           exercise6: routine.exercise6,
           sets6: routine.sets6,
           reps6: routine.reps6,
