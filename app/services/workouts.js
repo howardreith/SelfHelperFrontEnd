@@ -23,7 +23,7 @@ export default Service.extend({
   },
 
   getWorkoutsEntries () {
-    console.log('getWorkoutsEntries was run!')
+    // console.log('getWorkoutsEntries was run!')
     const workoutsEntries = this.get('ajax').request('/workouts')
   // console.log(columnEntries)
     return workoutsEntries

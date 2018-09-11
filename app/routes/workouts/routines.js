@@ -9,13 +9,7 @@ export default Route.extend({
     const response = this.get('routines').getRoutinesEntries()
     return response
     .then((result) => {
-      // console.log('result is ', result.downward_arrow)
-      // result.routines.forEach((routine) => {
-        // console.log('downward_arrow is ', downward_arrow)
-      //   routine.updated_at = routine.updated_at.slice(0, -5).split('T').join('  ')
-      //   routine.updated_at = routine.created_at.slice(0, -5).split('T').join('  ')
-      // })
-      // console.log('result.downward_arrows is ', result.downward_arrows)
+      console.log('result is ', result.routines)
       return result.routines
     })
   },

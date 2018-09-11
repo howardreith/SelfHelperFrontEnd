@@ -20,17 +20,17 @@ export default Route.extend({
       })
     },
     cancel () {
-      this.transitionTo('workouts.routines')
+      this.transitionTo('workouts.routines.index')
     }
   },
 
   model (params) {
     const response = this.get('routines').getRoutinesEntry(params.routine_id)
-    console.log('response is ', response)
+    // console.log('response is ', response)
     return response
     .then((result) => {
-      console.log('result is', result)
-      console.log('result.routine is ', result.routine)
+      // console.log('result is', result)
+      // console.log('result.routine is ', result.routine)
       // result.routine.updated_at = result.journal_entry.updated_at.slice(0, -5).split('T').join('  ')
       return result.routine
     })
