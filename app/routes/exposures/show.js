@@ -21,8 +21,10 @@ export default Route.extend({
     cancel (entry) {
       if (!entry.action && !entry.prediction && !entry.actual && !entry.satisfaction) {
         this.get('exposures').deleteExposuresEntry(entry.id)
+        .then(() => this.transitionTo('exposures.view'))
+      } else {
+        this.transitionTo('exposures.view')
       }
-      this.transitionTo('exposures.view')
     }
   },
 

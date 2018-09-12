@@ -21,8 +21,10 @@ export default Route.extend({
     cancel (entry) {
       if (!entry.autothought1 && !entry.distortion1 && !entry.response1) {
         this.get('arrows').deleteArrowsEntry(entry.id)
+        .then(() => this.transitionTo('arrows.view'))
+      } else {
+        this.transitionTo('arrows.view')
       }
-      this.transitionTo('arrows.view')
     }
   },
 

@@ -27,8 +27,10 @@ export default Route.extend({
     cancel (entry) {
       if (!entry.name) {
         this.get('workouts').deleteWorkoutsEntry(entry.id)
+        .then(() => this.transitionTo('workouts.view'))
+      } else {
+        this.transitionTo('workouts.view')
       }
-      this.transitionTo('workouts.view')
     },
     selectRoutine (routineChoice, routineChoiceIndex, fullRoutineChoice) {
       this.set('routineChoice', routineChoice)

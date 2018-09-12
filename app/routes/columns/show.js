@@ -7,7 +7,6 @@ export default Route.extend({
 
   actions: {
     updateColumnsEntry (entry) {
-      // console.log('entry in show.js is ', entry)
       this.get('columns').updateColumnsEntry(entry)
       .then(() => this.refresh())
       .then(() => {
@@ -22,8 +21,10 @@ export default Route.extend({
     cancel (entry) {
       if (!entry.event && !entry.emotion && !entry.autothought && !entry.distortion && !entry.response) {
         this.get('columns').deleteColumnsEntry(entry.id)
+        .then(() => this.transitionTo('columns.view'))
+      } else {
+        this.transitionTo('columns.view')
       }
-      this.transitionTo('columns.view')
     }
   },
 

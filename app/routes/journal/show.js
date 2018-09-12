@@ -21,8 +21,10 @@ export default Route.extend({
     cancel (entry) {
       if (!entry.title && !entry.content) {
         this.get('journal').deleteJournalEntry(entry.id)
+        .then(() => this.transitionTo('journal.view'))
+      } else {
+        this.transitionTo('journal.view')
       }
-      this.transitionTo('journal.view')
     }
   },
 

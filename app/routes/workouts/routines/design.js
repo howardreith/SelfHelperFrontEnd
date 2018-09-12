@@ -21,8 +21,10 @@ export default Route.extend({
     cancel (entry) {
       if (!entry.name && !entry.exercise1 && !entry.sets1 && !entry.reps1) {
         this.get('routines').deleteRoutinesEntry(entry.id)
+        .then(() => this.transitionTo('workouts.routines.index'))
+      } else {
+        this.transitionTo('workouts.routines.index')
       }
-      this.transitionTo('workouts.routines.index')
     }
   },
 
