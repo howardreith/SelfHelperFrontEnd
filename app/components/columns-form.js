@@ -4,8 +4,12 @@ export default Component.extend({
   tagName: 'form',
   classNames: ['form-horizontal'],
   entry: {},
+  showDistortionsOn: false,
 
   actions: {
+    showDistortions () {
+      this.toggleProperty('showDistortionsOn')
+    },
     submit () {
       this.entry.id = this.get('columnEntry.id')
       this.entry.event = this.get('columnEntry.event')

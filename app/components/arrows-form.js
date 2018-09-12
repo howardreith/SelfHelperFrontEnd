@@ -6,8 +6,12 @@ export default Component.extend({
   classNames: ['form-horizontal'],
   flashMessages: service(),
   entry: {},
+  showDistortionsOn: false,
 
   actions: {
+    showDistortions () {
+      this.toggleProperty('showDistortionsOn')
+    },
     submit () {
       this.entry.id = this.get('arrowsEntry.id')
       this.entry.autothought1 = this.get('arrowsEntry.autothought1')

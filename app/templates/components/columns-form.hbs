@@ -1,11 +1,14 @@
+<div class='text-center input-page-heading'>
+  <h2>Columns Method</h2>
+</div>
+
 {{input type='hidden' value=columnEntry.id}}
 <h5>Last updated {{columnEntry.updated_at}}</h5>
 <h4>Event</h4>{{input value=columnEntry.event}}
 <h4>Emotion</h4>{{input value=columnEntry.emotion}}
 <h4>Automatic Thought</h4>{{input value=columnEntry.autothought}}
-<h4 id='cognitive-distortions-heading'>Cognitive Distortion</h4><button id='show-distortions' href=".distortions" type='button' class="btn btn-xs" data-toggle="collapse">Show Distortions List</button>
-<div class='distortions collapse'>All-Or-Nothing Thinking, Overgeneralization, Mental Filter, Disqualifying the Positive, Jumping to Conclusions (Mind-Reading/Fortune-Telling), Magnification (Catastrophizing), Minimization, Emotional Reasoning, 'Should' Statements, Labeling</div>
-{{input value=columnEntry.distortion}}
+<h4 id='cognitive-distortions-heading'>Cognitive Distortion</h4><button id='show-distortions' {{action 'showDistortions'}}>Show Distortions List</button>
+{{#if showDistortionsOn}}<div>All-Or-Nothing Thinking, Overgeneralization, Mental Filter, Disqualifying the Positive, Jumping to Conclusions (Mind-Reading/Fortune-Telling), Magnification (Catastrophizing), Minimization, Emotional Reasoning, 'Should' Statements, Labeling</div>{{/if}}{{input value=columnEntry.distortion}}
 <h4>Rational Response</h4>{{input value=columnEntry.response}}
 
 <div id='update-column-method-button'>
