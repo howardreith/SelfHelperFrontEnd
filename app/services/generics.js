@@ -12,7 +12,6 @@ export default Service.extend({
   isAuthenticated: bool('credentials.token'),
 
   createGenericsEntry () {
-  // console.log('createColumnsEntry was called in the final stage')
     return this.get('ajax').post('/generics', {
       data: {
         generic: {
@@ -23,15 +22,11 @@ export default Service.extend({
   },
 
   getGenericsEntries () {
-  // console.log('getColumnMethods was run!')
     const genericsEntries = this.get('ajax').request('/generics')
-  // console.log(columnEntries)
     return genericsEntries
   },
 
   updateGenericsEntry (entry) {
-  // console.log('updateColumnEntry was run in the service')
-    // console.log('entry in the updateGenericsEntry service is ', entry)
     return this.get('ajax').patch('/generics/' + entry.id, {
       data: {
         generic: {
@@ -42,8 +37,6 @@ export default Service.extend({
     })
   },
   deleteGenericsEntry (id) {
-  // console.log('deleteColumnEntry was run in the service.')
-  // console.log('id in the deleteColumnEntry service is ', id)
     return this.get('ajax').del('/generics/' + id)
   }
 })

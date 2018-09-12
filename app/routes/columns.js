@@ -11,11 +11,8 @@ export default Route.extend({
 
   actions: {
     createColumnsEntry () {
-      // console.log('createColumnsEntry was called in columns.js route')
       this.get('columns').createColumnsEntry()
         .then((response) => {
-          // console.log('response is ', response)
-          // console.log('response.colum_method.id is ', response.colum_method.id)
           this.transitionTo('/columns/' + response.colum_method.id)
         })
         .then(() => {
@@ -29,13 +26,10 @@ export default Route.extend({
     },
 
     getColumnEntries () {
-      // console.log('in columns.js getColumnEntries has been accessed')
       const columnEntries = this.get('columns').getColumnEntries()
       return columnEntries
       .then((response) => {
-        // console.log('response is ', response)
         this.columnEntries = response.colum_methods
-        // console.log('this.columnEntries is ', this.columnEntries)
       })
       .then(() => {
         this.get('flashMessages')

@@ -12,7 +12,6 @@ export default Service.extend({
   isAuthenticated: bool('credentials.token'),
 
   createRoutinesEntry () {
-  // console.log('createColumnsEntry was called in the final stage')
     return this.get('ajax').post('/routines', {
       data: {
         routine: {
@@ -23,22 +22,16 @@ export default Service.extend({
   },
 
   getRoutinesEntries () {
-  // console.log('getColumnMethods was run!')
     const routinesEntries = this.get('ajax').request('/routines')
-  // console.log(columnEntries)
     return routinesEntries
   },
 
   getRoutinesEntry (id) {
-  // console.log('getColumnsEntry was run!')
     const routinesEntry = this.get('ajax').request('/routines/' + id)
-  // console.log('columnEntry is ', columnEntry)
     return routinesEntry
   },
 
   updateRoutinesEntry (entry) {
-    // console.log('updateRoutinesEntry was run in the service')
-    // console.log('entry in the updateRoutinesEntry service is ', entry)
     return this.get('ajax').patch('/routines/' + entry.id, {
       data: {
         routine: {
@@ -79,8 +72,6 @@ export default Service.extend({
     })
   },
   deleteRoutinesEntry (id) {
-  // console.log('deleteColumnEntry was run in the service.')
-  // console.log('id in the deleteColumnEntry service is ', id)
     return this.get('ajax').del('/routines/' + id)
   }
 })

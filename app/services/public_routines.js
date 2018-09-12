@@ -17,9 +17,7 @@ export default Service.extend({
   },
 
   getPublicRoutinesEntry (id) {
-  // console.log('getColumnsEntry was run!')
     const publicRoutinesEntry = this.get('ajax').request('/public_routines/' + id)
-  // console.log('columnEntry is ', columnEntry)
     return publicRoutinesEntry
   },
 

@@ -12,7 +12,6 @@ export default Service.extend({
   isAuthenticated: bool('credentials.token'),
 
   createWorkoutsEntry () {
-  // console.log('createColumnsEntry was called in the final stage')
     return this.get('ajax').post('/workouts', {
       data: {
         workout: {
@@ -23,22 +22,16 @@ export default Service.extend({
   },
 
   getWorkoutsEntries () {
-    // console.log('getWorkoutsEntries was run!')
     const workoutsEntries = this.get('ajax').request('/workouts')
-  // console.log(columnEntries)
     return workoutsEntries
   },
 
   getWorkoutsEntry (id) {
-  // console.log('getColumnsEntry was run!')
     const workoutsEntry = this.get('ajax').request('/workouts/' + id)
-  // console.log('columnEntry is ', columnEntry)
     return workoutsEntry
   },
 
   updateWorkoutsEntry (entry) {
-  // console.log('updateColumnEntry was run in the service')
-    // console.log('entry in the updateColumnEntry service is ', entry)
     return this.get('ajax').patch('/workouts/' + entry.id, {
       data: {
         workout: {
@@ -169,8 +162,6 @@ export default Service.extend({
     })
   },
   deleteWorkoutsEntry (id) {
-  // console.log('deleteColumnEntry was run in the service.')
-  // console.log('id in the deleteColumnEntry service is ', id)
     return this.get('ajax').del('/workouts/' + id)
   }
 })

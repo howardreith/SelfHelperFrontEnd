@@ -12,7 +12,6 @@ export default Service.extend({
   isAuthenticated: bool('credentials.token'),
 
   createArrowsEntry () {
-  // console.log('createColumnsEntry was called in the final stage')
     return this.get('ajax').post('/downward_arrows', {
       data: {
         downward_arrow: {
@@ -25,23 +24,16 @@ export default Service.extend({
   },
 
   getArrowsEntries () {
-  // console.log('getColumnMethods was run!')
     const arrowsEntries = this.get('ajax').request('/downward_arrows')
-  // console.log(columnEntries)
     return arrowsEntries
   },
 
   getArrowsEntry (id) {
-  // console.log('getColumnsEntry was run!')
     const arrowsEntry = this.get('ajax').request('/downward_arrows/' + id)
-  // console.log('columnEntry is ', columnEntry)
     return arrowsEntry
   },
 
   updateArrowsEntry (entry) {
-  // console.log('updateColumnEntry was run in the service')
-    // console.log('entry in the updateColumnEntry service is ', entry)
-    // console.log('entry.autothought2 is ', entry.autothought2)
     return this.get('ajax').patch('/downward_arrows/' + entry.id, {
       data: {
         downward_arrow: {
@@ -110,8 +102,6 @@ export default Service.extend({
     })
   },
   deleteArrowsEntry (id) {
-  // console.log('deleteColumnEntry was run in the service.')
-  // console.log('id in the deleteColumnEntry service is ', id)
     return this.get('ajax').del('/downward_arrows/' + id)
   }
 })
