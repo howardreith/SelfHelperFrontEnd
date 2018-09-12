@@ -60,6 +60,28 @@ export default Route.extend({
             .danger('There was a problem. Please try again.')
         })
     },
+    sortTableByInclude () {
+      let rows, i, x, y, shouldSwitch
+      const table = document.getElementById('routines-table')
+      let switching = true
+      while (switching) {
+        switching = false
+        rows = table.getElementsByTagName('TR')
+        for (i = 1; i < (rows.length - 1); i++) {
+          shouldSwitch = false
+          x = rows[i].getElementsByTagName('TD')[0]
+          y = rows[i + 1].getElementsByTagName('TD')[0]
+          if (x.children[0].checked < y.children[0].checked) {
+            shouldSwitch = true
+            break
+          }
+        }
+        if (shouldSwitch) {
+          rows[i].parentNode.insertBefore(rows[i + 1], rows[i])
+          switching = true
+        }
+      }
+    },
     sortTableById () {
       let rows, i, x, y, shouldSwitch
       const table = document.getElementById('routines-table')
