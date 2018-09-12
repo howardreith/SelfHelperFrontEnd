@@ -14,7 +14,10 @@ export default Component.extend({
       this.sendAction('submit', this.get('entry'))
     },
     cancel () {
-      this.sendAction('cancel')
+      this.entry.title = this.get('journalEntry.title')
+      this.entry.content = this.get('journalEntry.content')
+      this.entry.id = this.get('journalEntry.id')
+      this.sendAction('cancel', this.get('entry'))
     }
   }
 })

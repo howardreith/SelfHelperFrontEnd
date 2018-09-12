@@ -18,7 +18,11 @@ export default Route.extend({
           .danger('There was a problem. Please try again.')
       })
     },
-    cancel () {
+    cancel (entry) {
+      console.log('entry is ', entry)
+      if (!entry.title && !entry.content) {
+        this.get('journal').deleteJournalEntry(entry.id)
+      }
       this.transitionTo('journal.view')
     }
   },
