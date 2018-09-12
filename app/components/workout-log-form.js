@@ -312,7 +312,9 @@ export default Component.extend({
       this.sendAction('submit', this.get('entry'))
     },
     cancel () {
-      this.sendAction('cancel')
+      this.entry.id = this.get('model.workout.workout.id')
+      this.entry.name = this.get('routineChoice')
+      this.sendAction('cancel', this.get('entry'))
     }
   }
 })

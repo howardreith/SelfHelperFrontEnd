@@ -19,7 +19,10 @@ export default Route.extend({
           .danger('There was a problem. Please try again.')
       })
     },
-    cancel () {
+    cancel (entry) {
+      if (!entry.event && !entry.emotion && !entry.autothought && !entry.distortion && !entry.response) {
+        this.get('columns').deleteColumnsEntry(entry.id)
+      }
       this.transitionTo('columns.view')
     }
   },

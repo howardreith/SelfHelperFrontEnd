@@ -9,7 +9,7 @@ export default Component.extend({
   lastReveal: 1,
   findFalsy: function () {
     this.lastReveal = 1
-    for (let i=1; i<20; i++) {
+    for (let i = 1; i < 20; i++) {
       if (this.get('routinesEntry.exercise' + i)) {
         this.lastReveal = this.lastReveal + 1
       }
@@ -56,7 +56,12 @@ export default Component.extend({
       this.sendAction('submit', this.get('entry'))
     },
     cancel () {
-      this.sendAction('cancel')
+      this.entry.id = this.get('routinesEntry.id')
+      this.entry.name = this.get('routinesEntry.name')
+      this.entry.exercise1 = this.get('routinesEntry.exercise1')
+      this.entry.reps1 = this.get('routinesEntry.reps1')
+      this.entry.sets1 = this.get('routinesEntry.sets1')
+      this.sendAction('cancel', this.get('entry'))
     },
     showNext () {
       this.toggleProperty(this.lastReveal + 'isShowing')

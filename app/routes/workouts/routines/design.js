@@ -18,7 +18,10 @@ export default Route.extend({
           .danger('There was a problem. Please try again.')
       })
     },
-    cancel () {
+    cancel (entry) {
+      if (!entry.name && !entry.exercise1 && !entry.sets1 && !entry.reps1) {
+        this.get('routines').deleteRoutinesEntry(entry.id)
+      }
       this.transitionTo('workouts.routines.index')
     }
   },

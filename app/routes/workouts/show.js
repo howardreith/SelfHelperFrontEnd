@@ -24,7 +24,10 @@ export default Route.extend({
           .danger('There was a problem. Please try again.')
       })
     },
-    cancel () {
+    cancel (entry) {
+      if (!entry.name) {
+        this.get('workouts').deleteWorkoutsEntry(entry.id)
+      }
       this.transitionTo('workouts.view')
     },
     selectRoutine (routineChoice, routineChoiceIndex, fullRoutineChoice) {

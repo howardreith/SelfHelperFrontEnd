@@ -185,8 +185,14 @@
   </table>
 </div>
 
-<div id='save-workout-log-button-wrapper' class='text-center'>
-  <button class='btn btn-info' {{action 'submit'}}>Save Workout</button>
+<div id='update-workout-button' class='text-center'>
+  <button type="submit" tabIndex='1' class="btn btn-primary" {{action "submit"}}>
+  Save Workout
+  </button>
+
+  <button class="btn btn-default" {{action "cancel"}}>
+  Cancel
+  </button>
 </div>
 
 {{!-- {{#if indexIs1}}

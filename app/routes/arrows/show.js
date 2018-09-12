@@ -18,7 +18,10 @@ export default Route.extend({
           .danger('There was a problem. Please try again.')
       })
     },
-    cancel () {
+    cancel (entry) {
+      if (!entry.autothought1 && !entry.distortion1 && !entry.response1) {
+        this.get('arrows').deleteArrowsEntry(entry.id)
+      }
       this.transitionTo('arrows.view')
     }
   },

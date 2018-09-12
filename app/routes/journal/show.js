@@ -19,7 +19,6 @@ export default Route.extend({
       })
     },
     cancel (entry) {
-      console.log('entry is ', entry)
       if (!entry.title && !entry.content) {
         this.get('journal').deleteJournalEntry(entry.id)
       }

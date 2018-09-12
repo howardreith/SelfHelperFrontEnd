@@ -77,7 +77,11 @@ export default Component.extend({
       this.sendAction('submit', this.get('entry'))
     },
     cancel () {
-      this.sendAction('cancel')
+      this.entry.id = this.get('arrowsEntry.id')
+      this.entry.autothought1 = this.get('arrowsEntry.autothought1')
+      this.entry.distortion1 = this.get('arrowsEntry.distortion1')
+      this.entry.response1 = this.get('arrowsEntry.response1')
+      this.sendAction('cancel', this.get('entry'))
     },
     show2 () {
       if (!this.get('arrowsEntry.autothought1')) {

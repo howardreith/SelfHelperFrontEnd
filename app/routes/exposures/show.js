@@ -18,7 +18,10 @@ export default Route.extend({
           .danger('There was a problem. Please try again.')
       })
     },
-    cancel () {
+    cancel (entry) {
+      if (!entry.action && !entry.prediction && !entry.actual && !entry.satisfaction) {
+        this.get('exposures').deleteExposuresEntry(entry.id)
+      }
       this.transitionTo('exposures.view')
     }
   },
