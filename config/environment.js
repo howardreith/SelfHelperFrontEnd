@@ -3,7 +3,7 @@
 module.exports = function (environment) {
   'use strict'
   const ENV = {
-    modulePrefix: 'hotguydefrontend',
+    modulePrefix: 'SelfHelperFrontEnd',
     environment: environment,
     rootURL: '/',
     locationType: 'auto',
@@ -45,7 +45,7 @@ module.exports = function (environment) {
   }
 
   if (environment === 'production') {
-    ENV.rootURL = '/hotguydefrontend'
+    ENV.rootURL = '/SelfHelperFrontEnd'
     ENV.locationType = 'hash'
     ENV.apiHost = 'https://morning-brook-19819.herokuapp.com/'
   }

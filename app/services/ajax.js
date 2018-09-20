@@ -2,7 +2,7 @@ import { inject as service } from '@ember/service'
 import { computed } from '@ember/object'
 import AjaxService from 'ember-ajax/services/ajax'
 
-import ENV from 'hotguydefrontend/config/environment'
+import ENV from 'SelfHelperFrontEnd/config/environment'
 
 export default AjaxService.extend({
   host: ENV.apiHost,
