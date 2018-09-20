@@ -1,20 +1,16 @@
-# The Hot Guyde Companion
+# The Self-Helper
 ### A web application by Howie Reith
 
-The Hot Guyde is a self-improvement an dating advice book targeted primarily at straight men but with content helpful for most anyone. Topics include improving one's self-esteem, social awareness, fashion, hygiene, and general advice concerning date planning and sexuality. More information is available at http://thehotguyde.com.
+The Self-Helper is a web application built to accompany one's efforts when working through self-help literature. One of the best ways to stay motivated in any self-improvement effort is to track one's progress. This application is built to make that simple and easy.
+Links to the various facets of the application are as follows:
 
-The Hot Guyde Companion is a web application built to accompany one's efforts when working through the exercises in The Hot Guyde. The Hot Guyde strongly recommends the reader keep track of their progress in all exercises pursued. In the original release, excel spreadsheets were made available at thehotguyde.com/resources to assist in achieving this end. This application aims to replace all of those tools and more.
+    Front-End Repository: https://github.com/howardreith/SelfHelperFrontEnd
+    Front-End Live Site: https://howardreith.github.io/SelfHelperFrontEnd/
+    Back-End Repository: https://github.com/howardreith/SelfHelperBackEnd
+    Back-End Live Site: https://morning-brook-19819.herokuapp.com/
 
-In its present form, the companion includes only two functionalities: a journaling application and a "column method" application for use when conducting one's cognitive behavioral therapy-based "column method" exercises. Future versions will include tools for tracking one's exposture therapy progress, willpower exercises, workouts, weight, and more.
 
-### Links to the various facets of the application are as follows:
-
-* Front-End Repository: https://github.com/howardreith/hotguydefrontend
-* Front-End Live Site: https://howardreith.github.io/hotguydefrontend/
-* Back-End Repository: https://github.com/howardreith/hotguydebackend
-* Back-End Live Site: https://morning-brook-19819.herokuapp.com/
-
-### Technologies used in The Hot Guyde Companion include:
+### Technologies used in The Self-Helper include:
 HTML5, SCSS, Javascript, Ember.js, Handlebars, Bootstrap, and Heroku
 
 ## Planning and Execution
