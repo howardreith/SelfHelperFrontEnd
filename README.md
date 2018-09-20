@@ -2,13 +2,13 @@
 ### A web application by Howie Reith
 
 The Self-Helper is a web application built to accompany one's efforts when working through self-help literature. One of the best ways to stay motivated in any self-improvement effort is to track one's progress. This application is built to make that simple and easy.
-Links to the various facets of the application are as follows:
 
-    Front-End Repository: https://github.com/howardreith/SelfHelperFrontEnd
-    Front-End Live Site: https://howardreith.github.io/SelfHelperFrontEnd/
-    Back-End Repository: https://github.com/howardreith/SelfHelperBackEnd
-    Back-End Live Site: https://morning-brook-19819.herokuapp.com/
+### Links to the various facets of the application are as follows:
 
+* Front-End Repository: https://github.com/howardreith/SelfHelperFrontEnd
+* Front-End Live Site: https://howardreith.github.io/SelfHelperFrontEnd/
+* Back-End Repository: https://github.com/howardreith/SelfHelperBackEnd
+* Back-End Live Site: https://morning-brook-19819.herokuapp.com/
 
 ### Technologies used in The Self-Helper include:
 HTML5, SCSS, Javascript, Ember.js, Handlebars, Bootstrap, and Heroku
@@ -62,6 +62,6 @@ As a user, I want...
 
 ### Set Up and Installation
 
-The application is readily available simply by accessing https://github.com/howardreith/hotguydefrontend.
+The application is readily available simply by accessing https://github.com/howardreith/SelfHelperFrontEnd.
 
 To operate locally, you must fork and clone both the front and back-end repositories into separate folders. Run npm install on the front end repository and bundle install on the back end. To boot your back-end server, run bin/rails server which will launch of port 4741. To boot your back-end server, run ember install in the main directory. This will run a server on port 7165. Navigate to localhost:7165 in your browser and you should have full local access to the application.
